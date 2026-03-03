@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph's Vision | Official Site</title>
+    <title>Joseph Shipley | Official Site</title>
     <style>
         /* Global Styles */
         body {
@@ -92,12 +92,34 @@
             max-width: 150px;
         }
 
+        /* Media Grid */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); 
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .media-grid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid white;
+            object-fit: cover;
+        }
+
+        @media (max-width: 600px) {
+            .media-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         /* Bandcamp Section */
         .bandcamp-box {
             background: rgba(0,0,0,0.5);
             padding: 20px;
             border-radius: 8px;
-            margin-top: 50px;
+            margin: 50px auto;
+            max-width: 1000px;
             border-top: 4px solid #00ff00;
         }
 
@@ -111,7 +133,6 @@
             margin-top: 50px;
         }
 
-        /* Clearfix for floating images */
         .clearfix::after {
             content: "";
             clear: both;
@@ -123,22 +144,22 @@
 
 <nav>
     <ul>
-        <li><a href="#" onclick="showPage('home')">Home</a></li>
-        <li><a href="#" onclick="showPage('about')">About Me</a></li>
-        <li><a href="#" onclick="showPage('projects')">Projects</a></li>
-        <li><a href="#" onclick="showPage('music')">Music Portfolio</a></li>
-        <li><a href="#" onclick="showPage('vision')">Joseph's Vision</a></li>
-        <li><a href="#" onclick="showPage('photoblog')">Photo Blog</a></li>
-        <li><a href="#" onclick="showPage('physical')">Physical Media</a></li>
-        <li><a href="#" onclick="showPage('retro')">Retro Tech</a></li>
-        <li><a href="#" onclick="showPage('why')">Why This Site</a></li>
-        <li><a href="#" onclick="showPage('updates')">Updates</a></li>
+        <li><a href="#home" onclick="showPage('home')">Home</a></li>
+        <li><a href="#about" onclick="showPage('about')">About Me</a></li>
+        <li><a href="#projects" onclick="showPage('projects')">Projects</a></li>
+        <li><a href="#music" onclick="showPage('music')">Music Portfolio</a></li>
+        <li><a href="#vision" onclick="showPage('vision')">Joseph's Vision</a></li>
+        <li><a href="#photoblog" onclick="showPage('photoblog')">Photo Blog</a></li>
+        <li><a href="#physical" onclick="showPage('physical')">Physical Media</a></li>
+        <li><a href="#retro" onclick="showPage('retro')">Retro Tech</a></li>
+        <li><a href="#why" onclick="showPage('why')">Why This Site</a></li>
+        <li><a href="#updates" onclick="showPage('updates')">Updates</a></li>
     </ul>
 </nav>
 
 <section id="home" class="page active">
     <img src="https://i.ibb.co/rGzvDnwb/Joseph.png" alt="Joseph" class="small-img">
-    <h1>Welcome to Joseph's Website</h1>
+    <h1>Welcome to Joseph Shipley's Website</h1>
     <p>Hello, My Names Joseph, I Was Born On April 10th 2004. I Am a Music Producer, Aspiring Cartoonist, Aspiring Screenwriter, Aspiring Software Developer, and Technology Enthusiast. I Have Always Loved Retro Technology; Always Been A Passion Of Mine. I Hope To Grow And Be The Person I Wanna Be In The Future.</p>
     For Contact: Joseph@JosephShipley.com
     <h3>Selected Work</h3>
@@ -165,7 +186,6 @@
 <section id="music" class="page">
     <h1>Music Portfolio</h1>
     <p>Albums, EPs, experimental tracks, and production work.</p>
-    
     <div class="img-grid">
         <div><p>Star Sparkle</p><img src="https://i.ibb.co/MkXPcqgW/starsparkle.png" alt="starsparkle"></div>
         <div><p>Red Log</p><img src="https://i.ibb.co/Kz8Pk7T9/redlog.png" alt="redlog"></div>
@@ -179,7 +199,6 @@
     <div class="clearfix">
         <img src="https://i.ibb.co/v6QbfP6v/meee.png" alt="meee" class="float-left">
         <p>I Have A Vision for ALL of my creations, whether it be music art and etc, i may of had a rough past sure, but i have changed and grown into the person i am today, i found true passion music producing and trying to make my cartoon a reality and stuff, multiple albums are on the way, i will never quit music for the life of me, no matter how bad i am at it, and whatever happens, i will make sure it sounds good for the listener, my music is pretty much what you expect from me, liminal, vaporwave, and all of that good stuff, obviously nothings put out yet, i hope to put out more stuff in the future though for sure, all my tracks will be instrumental, if you like my music, glad you do, if not, thats fine, music is subjective after all.</p>
-        
         <h3>About Those Cartoons</h3>
         <p>Yeah about those cartoons i plan on making, i would love to work on them soon, obviously i do not know how to draw yet, which is why i wanna practice, i have like 2 cartoons and a cartoon animated movie planned out and after that, thats pretty much it from me, unless the world wants another project from me, which i would be down to do.</p>
     </div>
@@ -200,10 +219,7 @@
 
 <section id="physical" class="page">
     <h1>Physical Media Collection</h1>
-    
     <h3>VHS Collection</h3>
-    <p>My VHS Tape Photos Go Here.</p>
-    
     <div class="media-grid">
         <img src="https://i.ibb.co/Qvzs4P9h/vhs-1.png" alt="vhs 1">
         <img src="https://i.ibb.co/CKgFTfSr/vhs2.png" alt="vhs2">
@@ -211,45 +227,7 @@
         <img src="https://i.ibb.co/5Wn9JLfZ/vhs4.png" alt="vhs4">
         <img src="https://i.ibb.co/q3TjPcc5/vhs5.png" alt="vhs5">
     </div>
-
-    <hr>
-    
-    <h3>CD Collection</h3>
-    <p>My CD Collection Photos Go Here.</p>
-    <div class="media-grid">
-        </div>
-
-    <hr>
-    
-    <h3>Cassette Collection</h3>
-    <p>My Cassette Photos Go Here.</p>
-    <div class="media-grid">
-        </div>
 </section>
-
-<style>
-    .media-grid {
-        display: grid;
-        /* This creates exactly 5 columns of equal width */
-        grid-template-columns: repeat(5, 1fr); 
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .media-grid img {
-        width: 100%;
-        height: auto;
-        border: 1px solid white;
-        object-fit: cover;
-    }
-
-    /* Mobile fix: If the screen is too small, it will drop to 2 or 3 columns */
-    @media (max-width: 600px) {
-        .media-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-</style>
 
 <section id="retro" class="page">
     <h1>Retro Technology</h1>
@@ -277,7 +255,7 @@
 </div>
 
 <footer>
-    <p>© 2026 Joseph 
+    <p>© 2026 Joseph Shipley</p>
 </footer>
 
 <script>
@@ -292,6 +270,14 @@
         // Scroll to top
         window.scrollTo(0, 0);
     }
+
+    // Handle initial load if URL has a hash
+    window.onload = function() {
+        var hash = window.location.hash.substring(1);
+        if (hash) {
+            showPage(hash);
+        }
+    };
 </script>
 
 </body>
