@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph's Vision | Official Site</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ff0000; /* Red Background */
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: linear-gradient(90deg, #008000, #800080);
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            background-color: rgba(0,0,0,0.4);
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: black;
+            color: #00ff00;
+        }
+
+        /* Content Sections */
+        .page {
+            display: none; /* Hidden by default */
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+            min-height: 80vh;
+        }
+
+        .active {
+            display: block; /* Show active page */
+        }
+
+        h1 { border-bottom: 2px solid white; padding-bottom: 10px; }
+
+        /* Image Styling */
+        .small-img {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid white;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .img-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .img-grid img {
+            width: 100%;
+            border: 2px solid white;
+        }
+
+        .float-left {
+            float: left;
+            margin-right: 20px;
+            max-width: 150px;
+        }
+
+        /* Bandcamp Section */
+        .bandcamp-box {
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 50px;
+            border-top: 4px solid #00ff00;
+        }
+
+        .bandcamp-box a { color: #00ff00; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: black;
+            margin-top: 50px;
+        }
+
+        /* Clearfix for floating images */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('about')">About Me</a></li>
+        <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+        <li><a href="#" onclick="showPage('music')">Music Portfolio</a></li>
+        <li><a href="#" onclick="showPage('vision')">Joseph's Vision</a></li>
+        <li><a href="#" onclick="showPage('photoblog')">Photo Blog</a></li>
+        <li><a href="#" onclick="showPage('physical')">Physical Media</a></li>
+        <li><a href="#" onclick="showPage('retro')">Retro Tech</a></li>
+        <li><a href="#" onclick="showPage('why')">Why This Site</a></li>
+        <li><a href="#" onclick="showPage('updates')">Updates</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="page active">
+    <img src="https://i.ibb.co/rGzvDnwb/Joseph.png" alt="Joseph" class="small-img">
+    <h1>Welcome to Joseph's Website</h1>
+    <p>Hello, My Names Joseph, I Was Born On April 10th 2004. I Am a Music Producer, Aspiring Cartoonist, Aspiring Screenwriter, Aspiring Software Developer, and Technology Enthusiast. I Have Always Loved Retro Technology; Always Been A Passion Of Mine. I Hope To Grow And Be The Person I Wanna Be In The Future.</p>
+    For Contact: Joseph@JosephShipley.com
+    <h3>Selected Work</h3>
+    <p>I Make Music Sometimes So I Wanna Showcase It Here, I Am Working On My First Album: Dreamland Essentials (Volume 1)</p>
+</section>
+
+<section id="about" class="page">
+    <img src="https://i.ibb.co/S4SPm98w/Capture.png" alt="Capture" class="small-img">
+    <h1>About Me</h1>
+    <p>
+        <strong>Goals:</strong> To Produce For Others. Create As Much Content As Possible, Whether It Be Music, Art And Etc.<br><br>
+        <strong>Why I Love Doing What I Do:</strong> It Keeps Me Busy Away From Other Things.<br><br>
+        <strong>DAW I Use:</strong> FL Studio<br><br>
+        <strong>Genres I Love:</strong> Rap, DNB, Trap Metal, Etc.<br><br>
+        I Am A Beginner Music Producer And Have Been Using FL Studio For A Month. Music's Not Perfect, But It's Fun.
+    </p>
+</section>
+
+<section id="projects" class="page">
+    <h1>Projects</h1>
+    <p>Any Project I Pursue Will End Up Here.</p>
+</section>
+
+<section id="music" class="page">
+    <h1>Music Portfolio</h1>
+    <p>Albums, EPs, experimental tracks, and production work.</p>
+    
+    <div class="img-grid">
+        <div><p>Star Sparkle</p><img src="https://i.ibb.co/MkXPcqgW/starsparkle.png" alt="starsparkle"></div>
+        <div><p>Red Log</p><img src="https://i.ibb.co/Kz8Pk7T9/redlog.png" alt="redlog"></div>
+        <div><p>Next Life Chapter</p><img src="https://i.ibb.co/mrny5D2L/Nextife-Chapter.png" alt="Nextife Chapter"></div>
+        <div><p>Dreamland</p><img src="https://i.ibb.co/W4Z2x8vf/dreamland.png" alt="dreamland"></div>
+    </div>
+</section>
+
+<section id="vision" class="page">
+    <h1>Joseph's Vision</h1>
+    <div class="clearfix">
+        <img src="https://i.ibb.co/v6QbfP6v/meee.png" alt="meee" class="float-left">
+        <p>I Have A Vision for ALL of my creations, whether it be music art and etc, i may of had a rough past sure, but i have changed and grown into the person i am today, i found true passion music producing and trying to make my cartoon a reality and stuff, multiple albums are on the way, i will never quit music for the life of me, no matter how bad i am at it, and whatever happens, i will make sure it sounds good for the listener, my music is pretty much what you expect from me, liminal, vaporwave, and all of that good stuff, obviously nothings put out yet, i hope to put out more stuff in the future though for sure, all my tracks will be instrumental, if you like my music, glad you do, if not, thats fine, music is subjective after all.</p>
+        
+        <h3>About Those Cartoons</h3>
+        <p>Yeah about those cartoons i plan on making, i would love to work on them soon, obviously i do not know how to draw yet, which is why i wanna practice, i have like 2 cartoons and a cartoon animated movie planned out and after that, thats pretty much it from me, unless the world wants another project from me, which i would be down to do.</p>
+    </div>
+</section>
+
+<section id="photoblog" class="page">
+    <h1>Photo Blog</h1>
+    <p>COOL PHOTOS ONLY.</p>
+    <div class="img-grid">
+        <img src="https://i.ibb.co/3yY0mw6r/C-JOSEPH-SHIPLEY.jpg">
+        <img src="https://i.ibb.co/hnB4Cz9/C-JOSEPH-SHIPLEY-1.jpg">
+        <img src="https://i.ibb.co/x8FvKKjr/C-JOSEPH-SHIPLEY-2.jpg">
+        <img src="https://i.ibb.co/ds4xmPP4/C-JOSEPH-SHIPLEY-3.jpg">
+        <img src="https://i.ibb.co/Kjf0pWm3/C-JOSEPH-SHIPLEY-4.jpg">
+        <img src="https://i.ibb.co/pvn74vcM/C-JOSEPH-SHIPLEY-5.jpg">
+    </div>
+</section>
+
+<section id="physical" class="page">
+    <h1>Physical Media Collection</h1>
+    
+    <h3>VHS Collection</h3>
+    <p>My VHS Tape Photos Go Here.</p>
+    
+    <div class="media-grid">
+        <img src="https://i.ibb.co/Qvzs4P9h/vhs-1.png" alt="vhs 1">
+        <img src="https://i.ibb.co/CKgFTfSr/vhs2.png" alt="vhs2">
+        <img src="https://i.ibb.co/yFXVqgbp/vhs3.png" alt="vhs3">
+        <img src="https://i.ibb.co/5Wn9JLfZ/vhs4.png" alt="vhs4">
+        <img src="https://i.ibb.co/q3TjPcc5/vhs5.png" alt="vhs5">
+    </div>
+
+    <hr>
+    
+    <h3>CD Collection</h3>
+    <p>My CD Collection Photos Go Here.</p>
+    <div class="media-grid">
+        </div>
+
+    <hr>
+    
+    <h3>Cassette Collection</h3>
+    <p>My Cassette Photos Go Here.</p>
+    <div class="media-grid">
+        </div>
+</section>
+
+<style>
+    .media-grid {
+        display: grid;
+        /* This creates exactly 5 columns of equal width */
+        grid-template-columns: repeat(5, 1fr); 
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .media-grid img {
+        width: 100%;
+        height: auto;
+        border: 1px solid white;
+        object-fit: cover;
+    }
+
+    /* Mobile fix: If the screen is too small, it will drop to 2 or 3 columns */
+    @media (max-width: 600px) {
+        .media-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
+
+<section id="retro" class="page">
+    <h1>Retro Technology</h1>
+    <p>COOL PHOTOS OF RETRO TECHNOLOGY I HAVE WILL GO HERE. :)</p>
+</section>
+
+<section id="why" class="page">
+    <h1>Why I Made This Website</h1>
+    <p>WHY I MADE THIS WEBSITE TO BEGIN WITH Most People Are Going To Ask Me, Why Did I Make This To Begin With, Well I Wanna Put Myself Out There More And Truly Show Off My Serious Side, Goofy Side, And Just Have Fun With This Website In General, BUT This Is Also To Place My Music Portfolio And Other Things Such As Physical Media Collection, Retro Technology, Blog, And ETC.</p>
+</section>
+
+<section id="updates" class="page">
+    <h1>Update Corner</h1>
+    <p>Updates go here. I update here sometimes ;/</p>
+</section>
+
+<div class="bandcamp-box">
+    <h3>Check Out My Music</h3>
+    <p>My Bandcamp: <a href="https://blueskycatmusic.bandcamp.com" target="_blank">blueskycatmusic.bandcamp.com</a></p>
+    <p>New Song: <a href="https://blueskycatmusic.bandcamp.com/track/red-log" target="_blank">"Red Log"</a></p>
+    <ul>
+        <li><a href="https://blueskycatmusic.bandcamp.com/album/next-life-chapter" target="_blank">Next Life Chapter (EP)</a></li>
+        <li><a href="https://blueskycatmusic.bandcamp.com/track/star-sparkle" target="_blank">Star Sparkle</a></li>
+    </ul>
+</div>
+
+<footer>
+    <p>© 2026 Joseph 
+</footer>
+
+<script>
+    function showPage(pageId) {
+        // Hide all pages
+        var pages = document.getElementsByClassName('page');
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].classList.remove('active');
+        }
+        // Show the selected page
+        document.getElementById(pageId).classList.add('active');
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
