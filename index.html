@@ -67,7 +67,7 @@
 
         /* Image Styling */
         .small-img {
-            max-width: 200px;
+            max-width: 180px;
             height: auto;
             border: 2px solid white;
             margin-bottom: 15px;
@@ -76,7 +76,7 @@
 
         .img-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
             gap: 15px;
             margin-top: 20px;
         }
@@ -92,16 +92,18 @@
             max-width: 150px;
         }
 
-        /* Media Grid */
+        /* Media Grid - For CD and VHS */
         .media-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr); 
-            gap: 10px;
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 8px;
             margin-top: 15px;
+            margin-bottom: 30px;
         }
 
         .media-grid img {
             width: 100%;
+            max-width: 120px;
             height: auto;
             border: 1px solid white;
             object-fit: cover;
@@ -109,7 +111,7 @@
 
         @media (max-width: 600px) {
             .media-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
@@ -219,6 +221,7 @@
 
 <section id="physical" class="page">
     <h1>Physical Media Collection</h1>
+    
     <h3>VHS Collection</h3>
     <div class="media-grid">
         <img src="https://i.ibb.co/Qvzs4P9h/vhs-1.png" alt="vhs 1">
@@ -226,6 +229,14 @@
         <img src="https://i.ibb.co/yFXVqgbp/vhs3.png" alt="vhs3">
         <img src="https://i.ibb.co/5Wn9JLfZ/vhs4.png" alt="vhs4">
         <img src="https://i.ibb.co/q3TjPcc5/vhs5.png" alt="vhs5">
+    </div>
+
+    <h3>CD Collection</h3>
+    <div class="media-grid">
+        <img src="https://i.ibb.co/kVzMvTSj/cd.png" alt="cd">
+        <img src="https://i.ibb.co/1f0YKMcr/642794388-909654801710086-7861289555190478577-n.jpg" alt="CD Photo 1">
+        <img src="https://i.ibb.co/SDqQ5C58/642813798-890538943753772-81851485251125363-n.jpg" alt="CD Photo 2">
+        <img src="https://i.ibb.co/bM2TV2NJ/641917467-912612961371461-8487999081760548685-n.jpg" alt="CD Photo 3">
     </div>
 </section>
 
@@ -260,18 +271,14 @@
 
 <script>
     function showPage(pageId) {
-        // Hide all pages
         var pages = document.getElementsByClassName('page');
         for (var i = 0; i < pages.length; i++) {
             pages[i].classList.remove('active');
         }
-        // Show the selected page
         document.getElementById(pageId).classList.add('active');
-        // Scroll to top
         window.scrollTo(0, 0);
     }
 
-    // Handle initial load if URL has a hash
     window.onload = function() {
         var hash = window.location.hash.substring(1);
         if (hash) {
