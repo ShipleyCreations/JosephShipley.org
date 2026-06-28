@@ -391,13 +391,7 @@
     <h1>Projects</h1>
     <p>Any Project I Pursue Will End Up Here.</p>
     <img src="https://i.ibb.co/5xw4yBff/IMG-2777.jpg" alt="IMG 2777" border="0">
-    >p>surprise, here is my new project, so you are probably
-    wondering what i am even going to do with these blank vhs
-    tapes, well i decided to start my own in home vhs company
-    mostly for fun, i wanna learn vhs design and cassette design
-    by the end of the year so i might as well challenge myself
-    to actually accomplish this project 
-     
+    <p>surprise, here is my new project, so you are probably wondering what i am even going to do with these blank vhs tapes, well i decided to start my own in home vhs company mostly for fun, i wanna learn vhs design and cassette design by the end of the year so i might as well challenge myself to actually accomplish this project </p>
 </section>
 
 <section id="music" class="page">
@@ -446,7 +440,7 @@
     <h1>Video Game Screenshots</h1>
     <p>Screenshots of games i love</p>
     <div class="img-grid">
-        </div>
+    </div>
 </section>
 
 <section id="physical" class="page">
@@ -635,20 +629,11 @@
         for (var i = 0; i < pages.length; i++) {
             pages[i].classList.remove('active');
         }
-        var targetPage = document.getElementById(pageId);
-        if (targetPage) {
-            targetPage.classList.add('active');
+        var activePage = document.getElementById(pageId);
+        if (activePage) {
+            activePage.classList.add('active');
         }
-        window.scrollTo(0, 0);
     }
-
-    window.onload = function() {
-        var hash = window.location.hash.substring(1);
-        if (hash) {
-            showPage(hash);
-        }
-    };
 </script>
-
 </body>
 </html>
