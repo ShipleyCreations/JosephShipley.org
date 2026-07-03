@@ -308,12 +308,12 @@
         <h2>DragonTales</h2>
         <p>Collection status coming soon.</p>
     </div>
-
+        
     <div class="vhs-list">
         <h2>Cartoon Network</h2>
         <p>Collection Status Coming Soon</p>
     </div>
-
+        
     <div class="vhs-list">
         <h2>Magic School Bus</h2>
         <p>Collection Status Coming Soon</p>
@@ -639,25 +639,34 @@
     <p>New Song: <a href="https://blueskycatmusic.bandcamp.com/track/red-log" target="_blank">"Red Log"</a></p>
     <ul>
         <li><a href="https://blueskycatmusic.bandcamp.com/album/next-life-chapter" target="_blank">Next Life Chapter (EP)</a></li>
-        <li><a href="https://blueskycatmusic.bandcamp.com/track/star-sparkle" target="_blank">Star Sparkle</a></li>
+        <li><a href="https://blueskycatmusic.bandcamp.com/track/star-sparkle" target="_blank">Star Sparkle (Track)</a></li>
     </ul>
 </div>
 
 <footer>
-    <p>© 2026-2027 Joseph Shipley</p>
+    <p>&copy; 2026 Joseph Shipley. All rights reserved.</p>
 </footer>
 
 <script>
     function showPage(pageId) {
-        var pages = document.getElementsByClassName('page');
-        for (var i = 0; i < pages.length; i++) {
-            pages[i].classList.remove('active');
-        }
-        var activePage = document.getElementById(pageId);
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => {
+            page.classList.remove('active');
+        });
+
+        const activePage = document.getElementById(pageId);
         if (activePage) {
             activePage.classList.add('active');
         }
     }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) {
+            showPage(hash);
+        }
+    });
 </script>
+
 </body>
 </html>
