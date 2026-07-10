@@ -9,7 +9,8 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ff0000; /* Red Background */
+            background-color: #ff0000;
+            /* Red Background */
             color: white;
             line-height: 1.6;
         }
@@ -21,7 +22,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         nav ul {
@@ -39,7 +40,7 @@
             color: white;
             font-weight: bold;
             font-size: 0.9rem;
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0, 0, 0, 0.4);
             padding: 8px 15px;
             border-radius: 4px;
             transition: 0.3s;
@@ -65,9 +66,14 @@
             /* Show active page */
         }
 
-        h1 { border-bottom: 2px solid white;
-        padding-bottom: 10px; }
-        h2 { color: #00ff00; text-transform: uppercase; margin-top: 30px;
+        h1 {
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #00ff00;
+            text-transform: uppercase;
+            margin-top: 30px;
         }
 
         /* Image Styling */
@@ -100,7 +106,7 @@
         /* Media Grid - For CD, VHS, and Cassettes */
         .media-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr); 
+            grid-template-columns: repeat(6, 1fr);
             gap: 8px;
             margin-top: 15px;
             margin-bottom: 30px;
@@ -115,7 +121,7 @@
         }
 
         .vhs-list {
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             padding: 15px;
             border-left: 5px solid #008000;
             margin-bottom: 20px;
@@ -149,7 +155,7 @@
 
         /* Bandcamp Section */
         .bandcamp-box {
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 8px;
             margin: 50px auto;
@@ -157,7 +163,8 @@
             border-top: 4px solid #00ff00;
         }
 
-        .bandcamp-box a { color: #00ff00;
+        .bandcamp-box a {
+            color: #00ff00;
         }
 
         /* Footer */
@@ -177,527 +184,526 @@
 </head>
 <body>
 
-<nav>
-    <ul>
-        <li><a href="#home" onclick="showPage('home')">Home</a></li>
-        <li><a href="#about" onclick="showPage('about')">About Me</a></li>
-        <li><a href="#projects" onclick="showPage('projects')">Projects</a></li>
-        <li><a href="#music" onclick="showPage('music')">Music Portfolio</a></li>
-        <li><a href="#vision" onclick="showPage('vision')">Joseph's Vision</a></li>
-        <li><a href="#photoblog" onclick="showPage('photoblog')">Photo Blog</a></li>
-        <li><a href="#physical" onclick="showPage('physical')">Physical Media</a></li>
-        <li><a href="#missing-media" onclick="showPage('missing-media')">Missing Media</a></li>
-        <li><a href="#vhs-updates" onclick="showPage('vhs-updates')">VHS Updates</a></li>
-        <li><a href="#custom-vhs" onclick="showPage('custom-vhs')">Custom VHS</a></li>
-        <li><a href="#retro" onclick="showPage('retro')">Retro Tech</a></li>
-        <li><a href="#travel" onclick="showPage('travel')">Travel Photos</a></li>
-        <li><a href="#screenshots" onclick="showPage('screenshots')">Game Screenshots</a></li>
-        <li><a href="#why" onclick="showPage('why')">Why This Site</a></li>
-        <li><a href="#updates" onclick="showPage('updates')">Updates</a></li>
-    </ul>
-</nav>
-
-<section id="home" class="page active">
-    <img src="https://i.ibb.co/rGzvDnwb/Joseph.png" alt="Joseph" class="small-img">
-    <h1>Welcome to Joseph Shipley's Website</h1>
-   
-    <p>Hello, My Names Joseph, I Was Born On April 10th 2004. I Am a Music Producer, Aspiring Cartoonist, Aspiring Screenwriter, Aspiring Software Developer, and Technology Enthusiast.
-    I Have Always Loved Retro Technology; Always Been A Passion Of Mine.
-    I Hope To Grow And Be The Person I Wanna Be In The Future.</p>
-    For Contact: VhsNerd2004@Gmail.Com
-    <h3>Selected Work</h3>
-    <p>I Make Music Sometimes So I Wanna Showcase It Here, I Am Working On My First Album: Dreamland Essentials (Volume 1)</p>
-</section>
-
-<section id="vhs-updates" class="page">
-    <h1>VHS Updates Page</h1>
-    <p>This Is My VHS Collection Status Update and will be updated soon.</p>
-    
-    <h3>FRANCHISES I HAVE:</h3>
-    <p><strong>SANRIO, POUND PUPPIES, TMNT, SCOOBY DOO, GARFIELD, CHARLIE BROWN, SPONGEBOB, THE WACKY ADVENTURES OF RONALD MCDONALD, THE LAND BEFORE TIME, CLIFFORD, MAX AND RUBY, THE BACKYARDIANS, BLUES CLUES, DRAGONTALES, CARTOON NETWORK, MAGIC SCHOOL BUS</strong></p>
-
-    <div class="vhs-list">
-        <h2>Sanrio</h2>
+    <nav>
         <ul>
-            <li>The Dream Thief</li>
-            <li>Cinderella</li>
-            <li>Santas Missing Hat</li>
-            <li>Hello Kittys Paradise (Volume 4 and 1)</li>
-            <li>Mom Loves Me After All</li>
-            <li>My Melody: Little Red Riding Hood</li>
-            <li>Keroppi: Lets Play Baseball</li>
-            <li>Keroppi: Robin Hood</li>
-            <li>Summer of Fun</li>
-            <li>Snow White</li>
-            <li>Hello Kitty Special Featurette & Papa Beaver's Story Time</li>
-            <li>Goldilocks and the Three Bears Volume 1</li>
-            <li>Pochaccos Exciting Birthday</li>
-            <li>Wizard of Paws</li>
-            <li>Sanrio Animation Theater Volume 1, 2-4 Missing</li>
+            <li><a href="#home" onclick="showPage('home')">Home</a></li>
+            <li><a href="#about" onclick="showPage('about')">About Me</a></li>
+            <li><a href="#projects" onclick="showPage('projects')">Projects</a></li>
+            <li><a href="#music" onclick="showPage('music')">Music Portfolio</a></li>
+            <li><a href="#vision" onclick="showPage('vision')">Joseph's Vision</a></li>
+            <li><a href="#photoblog" onclick="showPage('photoblog')">Photo Blog</a></li>
+            <li><a href="#physical" onclick="showPage('physical')">Physical Media</a></li>
+            <li><a href="#missing-media" onclick="showPage('missing-media')">Missing Media</a></li>
+            <li><a href="#vhs-updates" onclick="showPage('vhs-updates')">VHS Updates</a></li>
+            <li><a href="#custom-vhs" onclick="showPage('custom-vhs')">Custom VHS</a></li>
+            <li><a href="#retro" onclick="showPage('retro')">Retro Tech</a></li>
+            <li><a href="#travel" onclick="showPage('travel')">Travel Photos</a></li>
+            <li><a href="#screenshots" onclick="showPage('screenshots')">Game Screenshots</a></li>
+            <li><a href="#why" onclick="showPage('why')">Why This Site</a></li>
+            <li><a href="#updates" onclick="showPage('updates')">Updates</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="vhs-list">
-        <h2>TMNT</h2>
-        <ul>
-            <li>Mighty Bebop</li>
-            <li>Turtles Awesome Easter</li>
-            <li>Cowabunga Shredhead</li>
-            <li>April Foolish</li>
-            <li>TMNT Movie 1</li>
-            <li>TMNT Movie 3</li>
-            <li>Hot Rodding Teenagers</li>
-        </ul>
-    </div>
+    <section id="home" class="page active">
+        <img src="https://i.ibb.co/rGzvDnwb/Joseph.png" alt="Joseph" class="small-img">
+        <h1>Welcome to Joseph Shipley's Website</h1>
 
-    <div class="vhs-list">
-        <h2>Garfield</h2>
-        <ul>
-            <li>Garfield: The Movie</li>
-            <li>Garfields Christmas</li>
-            <li>Garfield On The Town</li>
-            <li>Garfield Goes Hollywood</li>
-        </ul>
-    </div>
+        <p>Hello, My Names Joseph, I Was Born On April 10th 2004. I Am a Music Producer, Aspiring Cartoonist, Aspiring Screenwriter, Aspiring Software Developer, and Technology Enthusiast.
+            I Have Always Loved Retro Technology; Always Been A Passion Of Mine.
+            I Hope To Grow And Be The Person I Wanna Be In The Future.</p>
+        For Contact: VhsNerd2004@Gmail.Com
+        <h3>Selected Work</h3>
+        <p>I Make Music Sometimes So I Wanna Showcase It Here, I Am Working On My First Album: Dreamland Essentials (Volume 1)</p>
+    </section>
 
-    <div class="vhs-list">
-        <h2>Spongebob</h2>
-        <ul>
-            <li>SpongeGuard On Duty</li>
-            <li>SpongeBuddies</li>
-        </ul>
-    </div>
+    <section id="vhs-updates" class="page">
+        <h1>VHS Updates Page</h1>
+        <p>This Is My VHS Collection Status Update and will be updated soon.</p>
 
-    <div class="vhs-list">
-        <h2>The Wacky Adventures of Ronald McDonald</h2>
-        <p>The Wacky Adventures of Ronald McDonald Scared Silly VHS</p>
-        <p>The Wacky Adventures of Ronald McDonald The Legend of Grimace Island</p>
-    </div>
+        <h3>FRANCHISES I HAVE:</h3>
+        <p><strong>SANRIO, POUND PUPPIES, TMNT, SCOOBY DOO, GARFIELD, CHARLIE BROWN, SPONGEBOB, THE WACKY ADVENTURES OF RONALD MCDONALD, THE LAND BEFORE TIME, CLIFFORD, MAX AND RUBY, THE BACKYARDIANS, BLUES CLUES, DRAGONTALES, CARTOON NETWORK, MAGIC SCHOOL BUS</strong></p>
 
-    <div class="vhs-list">
-        <h2>Scooby Doo</h2>
-        <p>The Ghoul The Bat And The Ugly & To Switch A Witch</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>Charlie Brown</h2>
-        <p>Happy New Year Charlie Brown, Race For Your Life Charlie Brown, Snoopy Come Home, Bon Voyage Charlie Brown, A Charlie Brown Thanksgiving, A Charlie Brown Valentine, A Charlie Brown Christmas, The Great Pumpkin Charlie Brown, Be My Valentine Charlie Brown, It Was My Best Birthday Ever Charlie Brown, A Boy Named Charlie Brown, Its The Great Beagle Charlie Brown.</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>Pound Puppies</h2>
-        <p>Secret Agent Pup, Pound Puppies Loveable Huggable!, Legend Of Big Paw</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>The Land Before Time</h2>
-        <p>The Big Freeze .</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>Clifford The Big Red Dog</h2>
-        <p>Collection status coming soon.</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>Max and Ruby</h2>
-        <p>Collection status coming soon.</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>The Backyardigans</h2>
-        <p>Collection status coming soon.</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>Blues Clues</h2>
-        <p>Collection status coming soon.</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>DragonTales</h2>
-        <p>Collection status coming soon.</p>
-    </div>
-        
-    <div class="vhs-list">
-        <h2>Cartoon Network</h2>
-        <p>Collection Status Coming Soon</p>
-    </div>
-        
-    <div class="vhs-list">
-        <h2>Magic School Bus</h2>
-        <p>Collection Status Coming Soon</p>
-    </div>
-</section>
-
-<section id="custom-vhs" class="page">
-    <h1>Custom VHS Tapes</h1>
-    <p>Any custom vhs tapes i make will go here.</p>
-    <div class="vhs-list">
-        <p>Currently in the planning stages for my first custom tape: <strong>Charmy Kitty</strong>!</p>
-    </div>
-</section>
-
-<section id="missing-media" class="page">
-    <h1>Missing Physical Media</h1>
-    <p>These are the items I am currently looking for to complete my collections. (MORE COMING SOON)</p>
-
-    <div class="vhs-list">
-        <h2>Garfield</h2>
-        <ul>
-            <li>Garfield's Halloween Adventure</li>
-            <li>Garfield's Thanksgiving</li>
-            <li>Here Comes Garfield</li>
-            <li>Garfield in the Rough</li>
-            <li>Garfield: His Nine Lives</li>
-            <li>Garfield's Babes and Bullets</li>
-            <li>Garfield in Paradise</li>
-            <li>Garfield's Feline Fantasies</li>
-            <li>Garfield Gets a Life</li>
-        </ul>
-    </div>
-
-    <div class="vhs-list">
-        <h2>Pound Puppies</h2>
-        <p>Only a couple left! I could complete this collection very easily soon.</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>TMNT</h2>
-        <p>Out Of This World, Donatellos Degree, The Epic Begins, Coming Out Of Our Shells Tour, TMNT MOVIE II, Pizza By The Shred, Planet Of The Turtles, Leonardo Lighten Ups, Raphael Meets His Match, Michaelangelo Meets BugMan, Turtles Vs The Fly, Turtles Vs Leatherhead, Turtles Vs The Turtle Terminator, Turtles Vs Rhinoman</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>The Land Before Time</h2>
-        <p>Check Back Soon.</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>Clifford / Max and Ruby / The Backyardigans</h2>
-        <p>Maxs & Rubys Christmas, SpringTime For Max And Ruby
-           Max & Rubys Halloween, (will add more soon if i find more
-        these releases are the only ones i know so far).</p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>Blues Clues / DragonTales</h2>
-        <p>Check Back Soon </p>
-    </div>
-
-    <div class="vhs-list">
-        <h2>Magic School Bus / Arthur</h2>
-        <p>Arthur Cracks The Case, Arthur Gets Along
-           Arthur Gets Lost, Arthhr Gets Spooked
-           Arthur Goes To Hollywood, Arthur Goes To The 
-          Doctors
-          Magic School Bus: Gets Lost In Space
-           Magic School Bus: For Lunch 
-           Magic School Bus: Hops Home
-            Magic School Bus: Gets Eaten</p>
-    </div>
-</section>
-
-<section id="about" class="page">
-    <img src="https://i.ibb.co/S4SPm98w/Capture.png" alt="Capture" class="small-img">
-    <h1>About Me</h1>
-    <p>
-        <strong>Goals:</strong> To Produce For Others. Create As Much Content As Possible, Whether It Be Music, Art And Etc.<br><br>
-        <strong>Why I Love Doing What I Do:</strong> It Keeps Me Busy Away From Other Things.<br><br>
-        <strong>DAW I Use:</strong> FL Studio<br><br>
-        <strong>Genres I Love:</strong> Rap, DNB, Trap Metal, Etc.<br><br>
-        I Am A Beginner Music Producer And Have Been Using FL Studio For A Month. Music's Not Perfect, But It's Fun.
-    </p>
-</section>
-
-<section id="projects" class="page">
-    <h1>Projects</h1>
-    <p>Any Project I Pursue Will End Up Here.</p>
-    <img src="https://i.ibb.co/rKZ8ZwC8/IMG-2777.jpg" alt="Square Image" style="width: 250px; height: 250px; object-fit: cover; border-radius: 8px;">
-    <p>surprise, here is my new project, so you are probably wondering what i am even going to do with these blank vhs tapes, well i decided to start my own in home vhs company mostly for fun, i wanna learn vhs design and cassette design by the end of the year so i might as well challenge myself to actually accomplish this project </p>
-</section>
-
-<section id="music" class="page">
-    <h1>Music Portfolio</h1>
-    <p>Albums, EPs, experimental tracks, and production work.</p>
-    <div class="img-grid">
-        <div><p>Star Sparkle</p><img src="https://i.ibb.co/MkXPcqgW/starsparkle.png" alt="starsparkle"></div>
-        <div><p>Red Log</p><img src="https://i.ibb.co/Kz8Pk7T9/redlog.png" alt="redlog"></div>
-        <div><p>Next Life Chapter</p><img src="https://i.ibb.co/mrny5D2L/Nextife-Chapter.png" alt="Nextife Chapter"></div>
-        <div><p>Dreamland</p><img src="https://i.ibb.co/W4Z2x8vf/dreamland.png" alt="dreamland"></div>
-    </div>
-</section>
-
-<section id="vision" class="page">
-    <h1>Joseph's Vision</h1>
-    <div class="clearfix">
-        <img src="https://i.ibb.co/v6QbfP6v/meee.png" alt="meee" class="float-left">
-        <p>I Have A Vision for ALL of my creations, whether it be music art and etc, i may of had a rough past sure, but i have changed and grown into the person i am today, i found true passion music producing and trying to make my cartoon a reality and stuff, multiple albums are on the way, i will never quit music for the life of me, no matter how bad i am at it, and whatever happens, i will make sure it sounds good for the listener, my music is pretty much what you expect from me, liminal, vaporwave, and all of that good stuff, obviously nothings put out yet, i hope to put out more stuff in the future though for sure, all my tracks will be instrumental, if you like my music, glad you do, if not, thats fine, music is subjective after all.</p>
-        <h3>About Those Cartoons</h3>
-        <p>Yeah about those cartoons i plan on making, i would love to work on them soon, obviously i do not know how to draw yet, which i would be down to do.</p>
-    </div>
-</section>
-
-<section id="photoblog" class="page">
-    <h1>Photo Blog</h1>
-    <p>COOL PHOTOS ONLY.</p>
-    <div class="img-grid">
-        <img src="https://i.ibb.co/3yY0mw6r/C-JOSEPH-SHIPLEY.jpg">
-        <img src="https://i.ibb.co/hnB4Cz9/C-JOSEPH-SHIPLEY-1.jpg">
-        <img src="https://i.ibb.co/x8FvKKjr/C-JOSEPH-SHIPLEY-2.jpg">
-        <img src="https://i.ibb.co/ds4xmPP4/C-JOSEPH-SHIPLEY-3.jpg">
-        <img src="https://i.ibb.co/Kjf0pWm3/C-JOSEPH-SHIPLEY-4.jpg">
-        <img src="https://i.ibb.co/pvn74vcM/C-JOSEPH-SHIPLEY-5.jpg">
-        <img src="https://i.ibb.co/bYcDpbF/33-D5-A3-FC-C0-D2-4-D32-B120-6-E65-CC0-F9707.jpg" alt="33D5A3FC C0D2 4D32 B120 6E65CC0F9707">
-        <img src="https://i.ibb.co/rGt5BcVw/C834-B275-B19-E-4-F5-C-8581-1-D90-BE5404-C3.jpg" alt="C834B275 B19E 4F5C 8581 1D90BE5404C3">
-        <img src="https://i.ibb.co/tPLTWzgK/D724489-E-22-EC-4877-AE2-C-35-EBBA93-F829.jpg" alt="D724489E 22EC 4877 AE2C 35EBBA93F829">
-    </div>
-</section>
-
-<section id="travel" class="page">
-    <h1>Travel Photos</h1>
-    <p>IN CASE I TRAVEL, PHOTOS WILL GO HERE</p>
-</section>
-
-<section id="screenshots" class="page">
-    <h1>Video Game Screenshots</h1>
-    <p>Screenshots of games i love</p>
-    <div class="img-grid">
-    </div>
-</section>
-
-<section id="physical" class="page">
-    <h1>Physical Media Collection</h1>
-    
-    <h3>VHS Collection</h3>
-    <div class="media-grid">
-        <img src="https://i.ibb.co/Qvzs4P9h/vhs-1.png" alt="vhs 1">
-        <img src="https://i.ibb.co/CKgFTfSr/vhs2.png" alt="vhs2">
-        <img src="https://i.ibb.co/yFXVqgbp/vhs3.png" alt="vhs3">
-        <img src="https://i.ibb.co/5Wn9JLfZ/vhs4.png" alt="vhs4">
-        <img src="https://i.ibb.co/q3TjPcc5/vhs5.png" alt="vhs5">
-        <img src="https://i.ibb.co/Fbq4dYWF/IMG-5922.jpg" alt="IMG 5922">
-        <img src="https://i.ibb.co/d4jNyMGX/IMG-5921.jpg" alt="IMG 5921">
-        <img src="https://i.ibb.co/3YGdCNzK/IMG-5920.jpg" alt="IMG 5920">
-        <img src="https://i.ibb.co/FkpCXsCF/642257607-1585462586077361-2285229308848262969-n.jpg" alt="vhs photo">
-        <img src="https://i.ibb.co/5zznddK/647035930-1452621666365243-5824866543604519705-n.jpg" alt="vhs photo">
-        <img src="https://i.ibb.co/TB2L7YGW/641589955-1481016826716835-6239563710263709241-n.jpg" alt="vhs photo">
-        <img src="https://i.ibb.co/cKvPWqhY/640893056-1391904356013592-2823456816556471104-n.jpg" alt="vhs photo"> 
-        <img src="https://i.ibb.co/zhzdqHDh/642353803-1930423721201414-8278833618095174620-n.jpg" alt="vhs photo">
-        <img src="https://i.ibb.co/TD6Gtq9H/647271612-2685659031797210-2953618037658225909-n.jpg" alt="vhs photo">
-        <img src="https://i.ibb.co/KpdcgtpM/643448278-1291536162841421-6199942036139050-n.jpg" alt="vhs photo">
-        <img src="https://i.ibb.co/TnXbQwc/645392689-1464405522061787-4445685474134760152-n.jpg" alt="vhs photo">
-        <img src="https://i.ibb.co/FqWFQB8x/IMG-6187.jpg" alt="IMG 6187">
-        <img src="https://i.ibb.co/0Rfw4JVk/IMG-6186.jpg" alt="IMG 6186">
-        <img src="https://i.ibb.co/Kj9kCvJ9/IMG-6335.jpg" alt="IMG-6335">
-        <img src="https://i.ibb.co/k2TR6CPV/IMG-6439.jpg" alt="IMG 6439">
-        <img src="https://i.ibb.co/NgQGFjXH/IMG-6862.jpg" alt="IMG 6862">
-        <img src="https://i.ibb.co/cKnN9c8R/IMG-7280.jpg" alt="IMG 7280">
-        <img src="https://i.ibb.co/Pz5TSPBp/IMG-3899.jpg" alt="IMG 3899">
-        <img src="https://i.ibb.co/8ghQNNsH/27-B78-D44-7-D5-D-4955-858-C-B9-B29-E1-B55-A3.jpg" alt="27B78D44 7D5D 4955 858C B9B29E1B55A3">
-        <img src="https://i.ibb.co/pvH8rbKg/IMG-3517.jpg" alt="IMG 3517">
-        <img src="https://i.ibb.co/20Ww13Dc/IMG-3883.jpg" alt="IMG 3883">
-        <img src="https://i.ibb.co/KzL2Jdbk/IMG-4114.jpg" alt="IMG 4114" border="0">
-        <img src="https://i.ibb.co/qMyRdvPw/IMG-4285.jpg" alt="IMG 4285" border="0">
-        <img src="https://i.ibb.co/GvRvdV2q/IMG-4373.jpg" alt="IMG 4373" border="0">
-        <img src="https://i.ibb.co/FbK4XWHr/IMG-4522.jpg" alt="IMG 4522" border="0">
-        <img src="https://i.ibb.co/KppDTSZv/IMG-4683.jpg" alt="IMG 4683" border="0">
-        <img src="https://i.ibb.co/tTMKFyRW/IMG-4695.jpg" alt="IMG 4695" border="0">
-        <img src="https://i.ibb.co/N2L86tWC/IMG-4876.jpg" alt="IMG 4876" border="0">
+        <div class="vhs-list">
+            <h2>Sanrio</h2>
+            <ul>
+                <li>The Dream Thief</li>
+                <li>Cinderella</li>
+                <li>Santas Missing Hat</li>
+                <li>Hello Kittys Paradise (Volume 4 and 1)</li>
+                <li>Mom Loves Me After All</li>
+                <li>My Melody: Little Red Riding Hood</li>
+                <li>Keroppi: Lets Play Baseball</li>
+                <li>Keroppi: Robin Hood</li>
+                <li>Summer of Fun</li>
+                <li>Snow White</li>
+                <li>Hello Kitty Special Featurette & Papa Beaver's Story Time</li>
+                <li>Goldilocks and the Three Bears Volume 1</li>
+                <li>Pochaccos Exciting Birthday</li>
+                <li>Wizard of Paws</li>
+                <li>Sanrio Animation Theater Volume 1, 2-4 Missing</li>
+            </ul>
         </div>
 
-    <h3>CD Collection</h3>
-    <div class="media-grid">
-        <img src="https://i.ibb.co/kVzMvTSj/cd.png" alt="cd">
-        <img src="https://i.ibb.co/1f0YKMcr/642794388-909654801710086-7861289555190478577-n.jpg" alt="CD Photo 1">
-        <img src="https://i.ibb.co/SDqQ5C58/642813798-890538943753772-81851485251125363-n.jpg" alt="CD Photo 2">
-        <img src="https://i.ibb.co/bM2TV2NJ/641917467-912612961371461-8487999081760548685-n.jpg" alt="CD Photo 3">
-        <img src="https://i.ibb.co/4vvGDXt/640935374-914934391527919-5193854612849154078-n.jpg" alt="cd photo">
-        <img src="https://i.ibb.co/xqc9h5gv/646779634-1657465222057285-2534378790456294742-n.jpg" alt="cd photo">
-        <img src="https://i.ibb.co/wNzxknhK/642403575-1194134319598144-2839437349913678005-n.jpg" alt="cd photo">
-        <img src="https://i.ibb.co/Kxd0WJgr/643858033-2636463716734431-1410630261424173160-n.jpg" alt="cd photo">
-        <img src="https://i.ibb.co/TxCbZYZg/643532762-1355577189666403-3074412209866274125-n.jpg" alt="cd photo"> 
-        <img src="https://i.ibb.co/kVLQqn3r/IMG-7954.jpg" alt="IMG 7954">
-        <img src="https://i.ibb.co/n9kYwLk/IMG-9813.jpg" alt="IMG 9813">
-        <img src="https://i.ibb.co/hJ1cTJFg/IMG-9809.jpg" alt="IMG 9809">
-        <img src="https://i.ibb.co/kN7z0Bf/IMG-9808.jpg" alt="IMG 9808">
-        <img src="https://i.ibb.co/Rkd8sfYR/IMG-9811.jpg" alt="IMG 9811">
-        <img src="https://i.ibb.co/9mFQs8qx/IMG-9812.jpg" alt="IMG 9812">
-        <img src="https://i.ibb.co/N6fm3L9T/IMG-2537.jpg" alt="IMG 2537">
-        <img src="https://i.ibb.co/PzQM3hz5/IMG-2536.jpg" alt="IMG 2536">
-        <img src="https://i.ibb.co/ymH69xd8/IMG-2535.jpg" alt="IMG 2535">
-        <img src="https://i.ibb.co/RxPv3MG/IMG-2626.jpg" alt="IMG 2626">
-        <img src="https://i.ibb.co/8V5T8Qd/IMG-2722.jpg" alt="IMG 2722">
-        <img src="https://i.ibb.co/zVJzjG3Z/IMG-2723.jpg" alt="IMG 2723">
+        <div class="vhs-list">
+            <h2>TMNT</h2>
+            <ul>
+                <li>Mighty Bebop</li>
+                <li>Turtles Awesome Easter</li>
+                <li>Cowabunga Shredhead</li>
+                <li>April Foolish</li>
+                <li>TMNT Movie 1</li>
+                <li>TMNT Movie 3</li>
+                <li>Hot Rodding Teenagers</li>
+            </ul>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Garfield</h2>
+            <ul>
+                <li>Garfield: The Movie</li>
+                <li>Garfields Christmas</li>
+                <li>Garfield On The Town</li>
+                <li>Garfield Goes Hollywood</li>
+            </ul>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Spongebob</h2>
+            <ul>
+                <li>SpongeGuard On Duty</li>
+                <li>SpongeBuddies</li>
+            </ul>
+        </div>
+
+        <div class="vhs-list">
+            <h2>The Wacky Adventures of Ronald McDonald</h2>
+            <p>The Wacky Adventures of Ronald McDonald Scared Silly VHS</p>
+            <p>The Wacky Adventures of Ronald McDonald The Legend of Grimace Island</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Scooby Doo</h2>
+            <p>The Ghoul The Bat And The Ugly & To Switch A Witch</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Charlie Brown</h2>
+            <p>Happy New Year Charlie Brown, Race For Your Life Charlie Brown, Snoopy Come Home, Bon Voyage Charlie Brown, A Charlie Brown Thanksgiving, A Charlie Brown Valentine, A Charlie Brown Christmas, The Great Pumpkin Charlie Brown, Be My Valentine Charlie Brown, It Was My Best Birthday Ever Charlie Brown, A Boy Named Charlie Brown, Its The Great Beagle Charlie Brown.</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Pound Puppies</h2>
+            <p>Secret Agent Pup, Pound Puppies Loveable Huggable!, Legend Of Big Paw</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>The Land Before Time</h2>
+            <p>The Big Freeze .</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Clifford The Big Red Dog</h2>
+            <p>Collection status coming soon.</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Max and Ruby</h2>
+            <p>Collection status coming soon.</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>The Backyardigans</h2>
+            <p>Collection status coming soon.</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Blues Clues</h2>
+            <p>Collection status coming soon.</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>DragonTales</h2>
+            <p>Collection status coming soon.</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Cartoon Network</h2>
+            <p>Collection Status Coming Soon</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Magic School Bus</h2>
+            <p>Collection Status Coming Soon</p>
+        </div>
+    </section>
+
+    <section id="custom-vhs" class="page">
+        <h1>Custom VHS Tapes</h1>
+        <p>Any custom vhs tapes i make will go here.</p>
+        <div class="vhs-list">
+            <p>Currently in the planning stages for my first custom tape: <strong>Charmy Kitty</strong>!</p>
+        </div>
+    </section>
+
+    <section id="missing-media" class="page">
+        <h1>Missing Physical Media</h1>
+        <p>These are the items I am currently looking for to complete my collections. (MORE COMING SOON)</p>
+
+        <div class="vhs-list">
+            <h2>Garfield</h2>
+            <ul>
+                <li>Garfield's Halloween Adventure</li>
+                <li>Garfield's Thanksgiving</li>
+                <li>Here Comes Garfield</li>
+                <li>Garfield in the Rough</li>
+                <li>Garfield: His Nine Lives</li>
+                <li>Garfield's Babes and Bullets</li>
+                <li>Garfield in Paradise</li>
+                <li>Garfield's Feline Fantasies</li>
+                <li>Garfield Gets a Life</li>
+            </ul>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Pound Puppies</h2>
+            <p>Only a couple left! I could complete this collection very easily soon.</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>TMNT</h2>
+            <p>Out Of This World, Donatellos Degree, The Epic Begins, Coming Out Of Our Shells Tour, TMNT MOVIE II, Pizza By The Shred, Planet Of The Turtles, Leonardo Lighten Ups, Raphael Meets His Match, Michaelangelo Meets BugMan, Turtles Vs The Fly, Turtles Vs Leatherhead, Turtles Vs The Turtle Terminator, Turtles Vs Rhinoman</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>The Land Before Time</h2>
+            <p>Check Back Soon.</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Clifford / Max and Ruby / The Backyardigans</h2>
+            <p>Maxs & Rubys Christmas, SpringTime For Max And Ruby
+                Max & Rubys Halloween, (will add more soon if i find more
+                these releases are the only ones i know so far).</p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Blues Clues / DragonTales</h2>
+            <p>Check Back Soon </p>
+        </div>
+
+        <div class="vhs-list">
+            <h2>Magic School Bus / Arthur</h2>
+            <p>Arthur Cracks The Case, Arthur Gets Along
+                Arthur Gets Lost, Arthhr Gets Spooked
+                Arthur Goes To Hollywood, Arthur Goes To The
+                Doctors
+                Magic School Bus: Gets Lost In Space
+                Magic School Bus: For Lunch
+                Magic School Bus: Hops Home
+                Magic School Bus: Gets Eaten</p>
+        </div>
+    </section>
+
+    <section id="about" class="page">
+        <img src="https://i.ibb.co/S4SPm98w/Capture.png" alt="Capture" class="small-img">
+        <h1>About Me</h1>
+        <p>
+            <strong>Goals:</strong> To Produce For Others. Create As Much Content As Possible, Whether It Be Music, Art And Etc.<br><br>
+            <strong>Why I Love Doing What I Do:</strong> It Keeps Me Busy Away From Other Things.<br><br>
+            <strong>DAW I Use:</strong> FL Studio<br><br>
+            <strong>Genres I Love:</strong> Rap, DNB, Trap Metal, Etc.<br><br>
+            I Am A Beginner Music Producer And Have Been Using FL Studio For A Month. Music's Not Perfect, But It's Fun.
+        </p>
+    </section>
+
+    <section id="projects" class="page">
+        <h1>Projects</h1>
+        <p>Any Project I Pursue Will End Up Here.</p>
+        <img src="https://i.ibb.co/rKZ8ZwC8/IMG-2777.jpg" alt="Square Image" style="width: 250px; height: 250px; object-fit: cover; border-radius: 8px;">
+        <p>surprise, here is my new project, so you are probably wondering what i am even going to do with these blank vhs tapes, well i decided to start my own in home vhs company mostly for fun, i wanna learn vhs design and cassette design by the end of the year so i might as well challenge myself to actually accomplish this project </p>
+    </section>
+
+    <section id="music" class="page">
+        <h1>Music Portfolio</h1>
+        <p>Albums, EPs, experimental tracks, and production work.</p>
+        <div class="img-grid">
+            <div><p>Star Sparkle</p><img src="https://i.ibb.co/MkXPcqgW/starsparkle.png" alt="starsparkle"></div>
+            <div><p>Red Log</p><img src="https://i.ibb.co/Kz8Pk7T9/redlog.png" alt="redlog"></div>
+            <div><p>Next Life Chapter</p><img src="https://i.ibb.co/mrny5D2L/Nextife-Chapter.png" alt="Nextife Chapter"></div>
+            <div><p>Dreamland</p><img src="https://i.ibb.co/W4Z2x8vf/dreamland.png" alt="dreamland"></div>
+        </div>
+    </section>
+
+    <section id="vision" class="page">
+        <h1>Joseph's Vision</h1>
+        <div class="clearfix">
+            <img src="https://i.ibb.co/v6QbfP6v/meee.png" alt="meee" class="float-left">
+            <p>I Have A Vision for ALL of my creations, whether it be music art and etc, i may of had a rough past sure, but i have changed and grown into the person i am today, i found true passion music producing and trying to make my cartoon a reality and stuff, multiple albums are on the way, i will never quit music for the life of me, no matter how bad i am at it, and whatever happens, i will make sure it sounds good for the listener, my music is pretty much what you expect from me, liminal, vaporwave, and all of that good stuff, obviously nothings put out yet, i hope to put out more stuff in the future though for sure, all my tracks will be instrumental, if you like my music, glad you do, if not, thats fine, music is subjective after all.</p>
+            <h3>About Those Cartoons</h3>
+            <p>Yeah about those cartoons i plan on making, i would love to work on them soon, obviously i do not know how to draw yet, which i would be down to do.</p>
+        </div>
+    </section>
+
+    <section id="photoblog" class="page">
+        <h1>Photo Blog</h1>
+        <p>COOL PHOTOS ONLY.</p>
+        <div class="img-grid">
+            <img src="https://i.ibb.co/3yY0mw6r/C-JOSEPH-SHIPLEY.jpg">
+            <img src="https://i.ibb.co/hnB4Cz9/C-JOSEPH-SHIPLEY-1.jpg">
+            <img src="https://i.ibb.co/x8FvKKjr/C-JOSEPH-SHIPLEY-2.jpg">
+            <img src="https://i.ibb.co/ds4xmPP4/C-JOSEPH-SHIPLEY-3.jpg">
+            <img src="https://i.ibb.co/Kjf0pWm3/C-JOSEPH-SHIPLEY-4.jpg">
+            <img src="https://i.ibb.co/pvn74vcM/C-JOSEPH-SHIPLEY-5.jpg">
+            <img src="https://i.ibb.co/bYcDpbF/33-D5-A3-FC-C0-D2-4-D32-B120-6-E65-CC0-F9707.jpg" alt="33D5A3FC C0D2 4D32 B120 6E65CC0F9707">
+            <img src="https://i.ibb.co/rGt5BcVw/C834-B275-B19-E-4-F5-C-8581-1-D90-BE5404-C3.jpg" alt="C834B275 B19E 4F5C 8581 1D90BE5404C3">
+            <img src="https://i.ibb.co/tPLTWzgK/D724489-E-22-EC-4877-AE2-C-35-EBBA93-F829.jpg" alt="D724489E 22EC 4877 AE2C 35EBBA93F829">
+        </div>
+    </section>
+
+    <section id="travel" class="page">
+        <h1>Travel Photos</h1>
+        <p>IN CASE I TRAVEL, PHOTOS WILL GO HERE</p>
+    </section>
+
+    <section id="screenshots" class="page">
+        <h1>Video Game Screenshots</h1>
+        <p>Screenshots of games i love</p>
+        <div class="img-grid">
+        </div>
+    </section>
+
+    <section id="physical" class="page">
+        <h1>Physical Media Collection</h1>
+
+        <h3>VHS Collection</h3>
+        <div class="media-grid">
+            <img src="https://i.ibb.co/Qvzs4P9h/vhs-1.png" alt="vhs 1">
+            <img src="https://i.ibb.co/CKgFTfSr/vhs2.png" alt="vhs2">
+            <img src="https://i.ibb.co/yFXVqgbp/vhs3.png" alt="vhs3">
+            <img src="https://i.ibb.co/5Wn9JLfZ/vhs4.png" alt="vhs4">
+            <img src="https://i.ibb.co/q3TjPcc5/vhs5.png" alt="vhs5">
+            <img src="https://i.ibb.co/Fbq4dYWF/IMG-5922.jpg" alt="IMG 5922">
+            <img src="https://i.ibb.co/d4jNyMGX/IMG-5921.jpg" alt="IMG 5921">
+            <img src="https://i.ibb.co/3YGdCNzK/IMG-5920.jpg" alt="IMG 5920">
+            <img src="https://i.ibb.co/FkpCXsCF/642257607-1585462586077361-2285229308848262969-n.jpg" alt="vhs photo">
+            <img src="https://i.ibb.co/5zznddK/647035930-1452621666365243-5824866543604519705-n.jpg" alt="vhs photo">
+            <img src="https://i.ibb.co/TB2L7YGW/641589955-1481016826716835-6239563710263709241-n.jpg" alt="vhs photo">
+            <img src="https://i.ibb.co/cKvPWqhY/640893056-1391904356013592-2823456816556471104-n.jpg" alt="vhs photo">
+            <img src="https://i.ibb.co/zhzdqHDh/642353803-1930423721201414-8278833618095174620-n.jpg" alt="vhs photo">
+            <img src="https://i.ibb.co/TD6Gtq9H/647271612-2685659031797210-2953618037658225909-n.jpg" alt="vhs photo">
+            <img src="https://i.ibb.co/KpdcgtpM/643448278-1291536162841421-6199942036139050-n.jpg" alt="vhs photo">
+            <img src="https://i.ibb.co/TnXbQwc/645392689-1464405522061787-4445685474134760152-n.jpg" alt="vhs photo">
+            <img src="https://i.ibb.co/FqWFQB8x/IMG-6187.jpg" alt="IMG 6187">
+            <img src="https://i.ibb.co/0Rfw4JVk/IMG-6186.jpg" alt="IMG 6186">
+            <img src="https://i.ibb.co/Kj9kCvJ9/IMG-6335.jpg" alt="IMG-6335">
+            <img src="https://i.ibb.co/k2TR6CPV/IMG-6439.jpg" alt="IMG 6439">
+            <img src="https://i.ibb.co/NgQGFjXH/IMG-6862.jpg" alt="IMG 6862">
+            <img src="https://i.ibb.co/cKnN9c8R/IMG-7280.jpg" alt="IMG 7280">
+            <img src="https://i.ibb.co/Pz5TSPBp/IMG-3899.jpg" alt="IMG 3899">
+            <img src="https://i.ibb.co/8ghQNNsH/27-B78-D44-7-D5-D-4955-858-C-B9-B29-E1-B55-A3.jpg" alt="27B78D44 7D5D 4955 858C B9B29E1B55A3">
+            <img src="https://i.ibb.co/pvH8rbKg/IMG-3517.jpg" alt="IMG 3517">
+            <img src="https://i.ibb.co/20Ww13Dc/IMG-3883.jpg" alt="IMG 3883">
+            <img src="https://i.ibb.co/KzL2Jdbk/IMG-4114.jpg" alt="IMG 4114" border="0">
+            <img src="https://i.ibb.co/qMyRdvPw/IMG-4285.jpg" alt="IMG 4285" border="0">
+            <img src="https://i.ibb.co/GvRvdV2q/IMG-4373.jpg" alt="IMG 4373" border="0">
+            <img src="https://i.ibb.co/FbK4XWHr/IMG-4522.jpg" alt="IMG 4522" border="0">
+            <img src="https://i.ibb.co/KppDTSZv/IMG-4683.jpg" alt="IMG 4683" border="0">
+            <img src="https://i.ibb.co/tTMKFyRW/IMG-4695.jpg" alt="IMG 4695" border="0">
+            <img src="https://i.ibb.co/N2L86tWC/IMG-4876.jpg" alt="IMG 4876" border="0">
+        </div>
+
+        <h3>CD Collection</h3>
+        <div class="media-grid">
+            <img src="https://i.ibb.co/kVzMvTSj/cd.png" alt="cd">
+            <img src="https://i.ibb.co/1f0YKMcr/642794388-909654801710086-7861289555190478577-n.jpg" alt="CD Photo 1">
+            <img src="https://i.ibb.co/SDqQ5C58/642813798-890538943753772-81851485251125363-n.jpg" alt="CD Photo 2">
+            <img src="https://i.ibb.co/bM2TV2NJ/641917467-912612961371461-8487999081760548685-n.jpg" alt="CD Photo 3">
+            <img src="https://i.ibb.co/4vvGDXt/640935374-914934391527919-5193854612849154078-n.jpg" alt="cd photo">
+            <img src="https://i.ibb.co/xqc9h5gv/646779634-1657465222057285-2534378790456294742-n.jpg" alt="cd photo">
+            <img src="https://i.ibb.co/wNzxknhK/642403575-1194134319598144-2839437349913678005-n.jpg" alt="cd photo">
+            <img src="https://i.ibb.co/Kxd0WJgr/643858033-2636463716734431-1410630261424173160-n.jpg" alt="cd photo">
+            <img src="https://i.ibb.co/TxCbZYZg/643532762-1355577189666403-3074412209866274125-n.jpg" alt="cd photo">
+            <img src="https://i.ibb.co/kVLQqn3r/IMG-7954.jpg" alt="IMG 7954">
+            <img src="https://i.ibb.co/n9kYwLk/IMG-9813.jpg" alt="IMG 9813">
+            <img src="https://i.ibb.co/hJ1cTJFg/IMG-9809.jpg" alt="IMG 9809">
+            <img src="https://i.ibb.co/kN7z0Bf/IMG-9808.jpg" alt="IMG 9808">
+            <img src="https://i.ibb.co/Rkd8sfYR/IMG-9811.jpg" alt="IMG 9811">
+            <img src="https://i.ibb.co/9mFQs8qx/IMG-9812.jpg" alt="IMG 9812">
+            <img src="https://i.ibb.co/N6fm3L9T/IMG-2537.jpg" alt="IMG 2537">
+            <img src="https://i.ibb.co/PzQM3hz5/IMG-2536.jpg" alt="IMG 2536">
+            <img src="https://i.ibb.co/ymH69xd8/IMG-2535.jpg" alt="IMG 2535">
+            <img src="https://i.ibb.co/RxPv3MG/IMG-2626.jpg" alt="IMG 2626">
+            <img src="https://i.ibb.co/8V5T8Qd/IMG-2722.jpg" alt="IMG 2722">
+            <img src="https://i.ibb.co/zVJzjG3Z/IMG-2723.jpg" alt="IMG 2723">
+        </div>
+
+        <h3>Cassette Collection</h3>
+        <div class="media-grid">
+            <img src="https://i.ibb.co/v60j5ZcS/642149911-970214841998775-5563845904150218179-n.jpg" alt="Cassette 1">
+            <img src="https://i.ibb.co/LXM5v63b/640944780-25729250790091122-1440411865834980331-n.jpg" alt="Cassette 2">
+            <img src="https://i.ibb.co/279HgPSQ/640324877-1318979320041497-2144640955163389863-n.jpg" alt="Cassette 3">
+            <img src="https://i.ibb.co/ds9L1gR0/IMG-6046.jpg" alt="IMG 6046">
+            <img src="https://i.ibb.co/FqDX4nFZ/IMG-6044.jpg" alt="IMG 6044">
+            <img src="https://i.ibb.co/G4mxw4kb/IMG-6043.jpg" alt="IMG 6043">
+            <img src="https://i.ibb.co/FLYqYcdX/IMG-6339.jpg" alt="IMG 6339">
+            <img src="https://i.ibb.co/hR1GTn99/IMG-6338.jpg" alt="IMG 6338">
+            <img src="https://i.ibb.co/hJQSxCX9/IMG-7670.jpg" alt="IMG 7670">
+            <img src="https://i.ibb.co/tpG9NMMy/4-D132445-50-D3-4-E42-B71-C-2029-A9185798.jpg" alt="4D132445 50D3 4E42 B71C 2029A9185798">
+            <img src="https://i.ibb.co/75XxHL0/IMG-0016.jpg" alt="IMG 0016">
+            <img src="https://i.ibb.co/m5LgGJXp/IMG-0015.jpg" alt="IMG 0015">
+            <img src="https://i.ibb.co/DH7Jg37T/IMG-0014.jpg" alt="IMG 0014">
+            <img src="https://i.ibb.co/zVVfR4z6/IMG-0013.jpg" alt="IMG 0013">
+            <img src="https://i.ibb.co/4nf0pxN6/IMG-0012.jpg" alt="IMG 0012">
+            <img src="https://i.ibb.co/cS4wjKms/IMG-0011.jpg" alt="IMG 0011">
+            <img src="https://i.ibb.co/R4GD2Mkj/IMG-0010.jpg" alt="IMG 0010">
+            <img src="https://i.ibb.co/1GQt1sYH/IMG-2532.jpg" alt="IMG 2532">
+            <img src="https://i.ibb.co/B2Rwyw7r/IMG-3126.jpg" alt="IMG 3126">
+            <img src="https://i.ibb.co/W4Cg0T68/IMG-3127.jpg" alt="IMG 3127">
+            <img src="https://i.ibb.co/v4MNZ74b/IMG-3125.jpg" alt="IMG 3125">
+            <img src="https://i.ibb.co/yc2tHsZQ/IMG-3124.jpg" alt="IMG 3124">
+            <img src="https://i.ibb.co/vSZH358/IMG-3123.jpg" alt="IMG 3123">
+            <img src="https://i.ibb.co/7t73c9Rj/IMG-3841.jpg" alt="IMG 3841">
+        </div>
+    </section>
+
+    <section id="retro" class="page">
+        <h1>Retro Technology</h1>
+        <p>COOL PHOTOS OF RETRO TECHNOLOGY I HAVE WILL GO HERE. :)</p>
+        <img src="https://i.ibb.co/r2ymkLXh/IMG-7143.jpg" alt="IMG 7143" style="max-width:120px; width:100%; height:auto; border:1px solid white;">
+    </section>
+
+    <section id="why" class="page">
+        <h1>Why I Made This Website</h1>
+        <p>WHY I MADE THIS WEBSITE TO BEGIN WITH Most People Are Going To Ask Me, Why Did I Make This To Begin With, Well I Wanna Put Myself Out There More And Truly Show Off My Serious Side, Goofy Side, And Just Have Fun With This Website In General, BUT This Is Also To Place My Music Portfolio And Other Things Such As Physical Media Collection, Retro Technology, Blog, And ETC.</p>
+    </section>
+
+    <section id="updates" class="page">
+        <h1>Update Corner</h1>
+        <p>Updates go here. I update here sometimes ;/</p>
+
+        <div class="update-card">
+            <span class="update-date">7/9/2026</span>
+            <p class="update-text">So I should be able to complete my Sanrio vhs collection in full soon, it's complete as is but I'm missing a couple more and that's it, also I'm going to be working on my tmnt vhs tape collection now, I'll be able to get out of this world soon, also a music player is going to be added to this website in the coming months so keep a look out for it, it's gonna build up over time with songs I like and other obscure songs, all I got for this update just me building this website the way I want it to be, also take a look out for version 1.2 of this website, it's in the process of being coded</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">7/5/2026</span>
+            <p class="update-text">As I get done with my Sanrio vhs collection (English) I have updated the missing physical media section once again, I added more vhs tape titles for the franchises in there, only 2-3 franchises have them so far, but Sanrio is almost ready to be removed from the missing physical media section, its complete already and I'm proud of it, I know animation theater has 4 tapes, i WILL try finding those but can't promise anything as those are hard to find, but go check the missing media section, way more will be added in the future</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">7/3/2026</span>
+            <p class="update-text">yeah I heard about the whole physical media stuff going on right now, so basically game companies and etc are taking away physical media, which isn't surprising but kinda sucks, but it's so nice knowing that people are keeping physical media alive, that's what my website is, to show my passion for physical media and music production, while I may not have ALL of the physical media in the world (I wish XD) the most I can do is prove that rare vhs tapes CDs and cassettes that "don't exist" to people really do exist, physical media will live on forever.</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">7/2/2026</span>
+            <p class="update-text">here to announce that I am done with my Sanrio collection at this point, I only need the two CDS I listed and that's about it, I'm going to work on the other franchises too and get more stuff, insanely proud of how the Sanrio collection turned out, but now it's time to focus on other collections such as TMNT, And Magic School Bus and SpongeBob, whenever the remaining Sanrio tapes come check my physical media section</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">6/26/2026</span>
+            <p class="update-text">I may be updating this website soon, just the layout, I have a cool little thing planned with the background, may have music player too, also I made the decision to switch here since social media is becoming too exhausting in 2026 and everyone's getting their accounts deleted by AI, which unfortunately seems to be the new thing nowadays :/, oh well, but expect way more things with this website soon, more cool tabs, new layout, it's gonna be sick, may make a website for my music too, but yeah expect more from this website, it's gonna be great</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">6/20/2026</span>
+            <p class="update-text">hey all I'm still alive don't worry, I'm proud to announce my album dreamland essentials is now FULLY in production thankfully, also, I FINALLY got Pochaccos Exciting Birthday, I wish I got the Alice in wonderland Sanrio vhs, my English sanrio vhs collection is almost done, that's IF I'm not missing anymore, Sanrio is the first franchise in my collection I have ever completed, next franchise I'm going to continue working on afterwards, is TMNT, I been wanting to get more TMNT VHS for too long, so I will work on that, but yeah I'm glad. Got Pochaccos Exciting Birthday, I can officially add it on my vhs updates list</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">5/18/2026</span>
+            <p class="update-text">I actually didn't know this but a new kuromi album was releasing in June 2026, I guess I need to put it on the missing physical media section, it's kinda funny that I was never made aware of it, I am now though</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">5/3/2026</span>
+            <p class="update-text">Heyo everyone I'm back and I'm going to be updating the physical media section here soon, got some new goodies for the collection, dreamland album production is going alright, I got a couple new photos too for the cool photos section as well I'm updating that tomorrow though, I love how this website is coming along, I just don't update it everyday cause to me it's better to wait two weeks or so, but I am still alive XD</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">4/26/2026</span>
+            <p class="update-text">my first custom vhs tape will be made here soon, also i decided to start a vhs division in 2026 just for fun, i honestly love vhs divisions like family home entertainment and etc, so why not make my own right?, i am not giving out the name yet, i wanna make a couple of custom vhs tapes here first before i give any details out, this will be really fun for me, also im learning how to pan and scan using my video editor app i have on here) : )</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">4/24/2026</span>
+            <p class="update-text">i am in the process of working on my first album dreamland essentials, also im finally making my own custom vhs tapes of shows and stuff i love the most as well, im learning how too, i may make a custom vhs tape section, i have charmyyy kitty planned first, if you do not know what that is, charmyyy kitty had a cartoon released back then so i would love to make a vhs of that, she is hello kittys cat too, i still find that funny, though she is one of my favorite sanrio characters as well</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">4/11/2026</span>
+            <p class="update-text">Well guys I'm back, sorry for the wait, I had a good birthday yesterday (4/10/2026) and I got a couple more physical media goodies for the collection so definitely keep a look out for the physical media section of the website, also I have updated my email so there's that as well, also I decided to contact Sanrio about the whole club Sanrio dream thing, they say they barely have any information but like what I'm doing physical media wise and they wanna send stickers, so I guess all well that ends well, I should be way more active since I am also getting a laptop soon :), like way more active here, sorry for the long wait I guess, dreamland essentials will officially be in production starting late April!</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">3/26/2026</span>
+            <p class="update-text">So I have a guilty pleasure at the moment, sound effect CDS, I have no idea why but I love these alot, will definitely put that niche on the missing physical media section here in a while, I only started just collecting them right now, no one really grabs these things so why not grab them, I love these a lot for some reason, cannot really pinpoint why though</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">3/17/2026</span>
+            <p class="update-text">So I recently got the vhs tapes, funny thing about the featurette one, there's an anti piracy warning that scrolls, also I need to get back into updating this website, stay tuned</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">3/11/2026</span>
+            <p class="update-text">I have recently added new franchises to both the missing physical media corner and vhs updates tabs, and I plan on making a CD AND CASSETTE corner on here too and also making a missing cd and cassette corner as well, please keep a lookout for the websites next updates, it's gonna be sick</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">3/9/2026</span>
+            <p class="update-text">i have recently ordered new vhs tapes and a couple of MSDOS MAGAZINES, i cant wait for them to arrive, that will go in the retro technology tab, time to get some of these tabs started. also for missing physical media when certain stuff comes to me, some of the names on the franchises like say the hello kittys paradise vhs tapes will be removed off them if i have it whats the point of keeping it on missing physical media right?, just an update : D</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">3/6/2026</span>
+            <p class="update-text">good news, i have added a VHS UPDATES section, that way you can see whenever i get a new vhs tape and etc, physical media page will be updated very frequently and yes, i thought about it, i may get some of the sanrio dvds as well, but later down the line, still getting more stuff, new franchise unlocked though the wacky adventures of ronald mcdonald, yep i am getting those vhs tapes :)</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">3/5/2026</span>
+            <p class="update-text">Thinking of getting Sanrio DVDs too. Next up: TMNT VHS and Pound Puppies (VHS and 2012 DVDs)</p>
+        </div>
+
+        <div class="update-card">
+            <span class="update-date">3/4/2026</span>
+            <p class="update-text">Sanrio collection nearly done! (See Physical Media page). Missing Pochacco's Exciting Birthday, 2 Hello Kitty Paradise tapes, and Kuromi In My Head CD.</p>
+        </div>
+    </section>
+
+    <div class="bandcamp-box">
+        <h3>Check Out My Music</h3>
+        <p>My Bandcamp: <a href="https://blueskycatmusic.bandcamp.com" target="_blank">blueskycatmusic.bandcamp.com</a></p>
+        <p>New Song: <a href="https://blueskycatmusic.bandcamp.com/track/red-log" target="_blank">"Red Log"</a></p>
+        <ul>
+            <li><a href="https://blueskycatmusic.bandcamp.com/album/next-life-chapter" target="_blank">Next Life Chapter (EP)</a></li>
+            <li><a href="https://blueskycatmusic.bandcamp.com/track/star-sparkle" target="_blank">Star Sparkle (Track)</a></li>
+        </ul>
     </div>
-    
-    <h3>Cassette Collection</h3>
-    <div class="media-grid">
-        <img src="https://i.ibb.co/v60j5ZcS/642149911-970214841998775-5563845904150218179-n.jpg" alt="Cassette 1">
-        <img src="https://i.ibb.co/LXM5v63b/640944780-25729250790091122-1440411865834980331-n.jpg" alt="Cassette 2">
-        <img src="https://i.ibb.co/279HgPSQ/640324877-1318979320041497-2144640955163389863-n.jpg" alt="Cassette 3">
-        <img src="https://i.ibb.co/ds9L1gR0/IMG-6046.jpg" alt="IMG 6046">
-        <img src="https://i.ibb.co/FqDX4nFZ/IMG-6044.jpg" alt="IMG 6044">
-        <img src="https://i.ibb.co/G4mxw4kb/IMG-6043.jpg" alt="IMG 6043">
-        <img src="https://i.ibb.co/FLYqYcdX/IMG-6339.jpg" alt="IMG 6339">
-        <img src="https://i.ibb.co/hR1GTn99/IMG-6338.jpg" alt="IMG 6338">
-        <img src="https://i.ibb.co/hJQSxCX9/IMG-7670.jpg" alt="IMG 7670">
-        <img src="https://i.ibb.co/tpG9NMMy/4-D132445-50-D3-4-E42-B71-C-2029-A9185798.jpg" alt="4D132445 50D3 4E42 B71C 2029A9185798">
-        <img src="https://i.ibb.co/75XxHL0/IMG-0016.jpg" alt="IMG 0016">
-        <img src="https://i.ibb.co/m5LgGJXp/IMG-0015.jpg" alt="IMG 0015">
-        <img src="https://i.ibb.co/DH7Jg37T/IMG-0014.jpg" alt="IMG 0014">
-        <img src="https://i.ibb.co/zVVfR4z6/IMG-0013.jpg" alt="IMG 0013">
-        <img src="https://i.ibb.co/4nf0pxN6/IMG-0012.jpg" alt="IMG 0012">
-        <img src="https://i.ibb.co/cS4wjKms/IMG-0011.jpg" alt="IMG 0011">
-        <img src="https://i.ibb.co/R4GD2Mkj/IMG-0010.jpg" alt="IMG 0010">
-        <img src="https://i.ibb.co/1GQt1sYH/IMG-2532.jpg" alt="IMG 2532">
-        <img src="https://i.ibb.co/B2Rwyw7r/IMG-3126.jpg" alt="IMG 3126">
-        <img src="https://i.ibb.co/W4Cg0T68/IMG-3127.jpg" alt="IMG 3127">
-        <img src="https://i.ibb.co/v4MNZ74b/IMG-3125.jpg" alt="IMG 3125">
-        <img src="https://i.ibb.co/yc2tHsZQ/IMG-3124.jpg" alt="IMG 3124">
-        <img src="https://i.ibb.co/vSZH358/IMG-3123.jpg" alt="IMG 3123">
-        <img src="https://i.ibb.co/7t73c9Rj/IMG-3841.jpg" alt="IMG 3841">
-    </div>
-</section>
 
-<section id="retro" class="page">
-    <h1>Retro Technology</h1>
-    <p>COOL PHOTOS OF RETRO TECHNOLOGY I HAVE WILL GO HERE. :)</p>
-    <img src="https://i.ibb.co/r2ymkLXh/IMG-7143.jpg" alt="IMG 7143" style="max-width:120px; width:100%; height:auto; border:1px solid white;">
-</section>
+    <footer>
+        <p>&copy; 2026-2028 Joseph Shipley. All rights reserved.</p>
+    </footer>
 
-<section id="why" class="page">
-    <h1>Why I Made This Website</h1>
-    <p>WHY I MADE THIS WEBSITE TO BEGIN WITH Most People Are Going To Ask Me, Why Did I Make This To Begin With, Well I Wanna Put Myself Out There More And Truly Show Off My Serious Side, Goofy Side, And Just Have Fun With This Website In General, BUT This Is Also To Place My Music Portfolio And Other Things Such As Physical Media Collection, Retro Technology, Blog, And ETC.</p>
-</section>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.add('active');
+            }
+        }
 
-<section id="updates" class="page">
-    <h1>Update Corner</h1>
-    <p>Updates go here. I update here sometimes ;/</p>
-     
-    <div class="update-card">
-       <span class="update-date">7/9/2026</span>
-
-<p class="update-text">So I should be able to complete my Sanrio vhs collection in full soon, it’s complete as is but I’m missing a couple more and that’s it, also I’m going to be working on my tmnt vhs tape collection now, I’ll be able to get out of this world soon, also a music player is going to be added to this website in the coming months so keep a look out for it, it’s gonna build up over time with songs I like and other obscure songs, all I got for this update just me building this website the way I want it to be, also take a look out for version 1.2 of this website, it’s in the process of being coded
-    <div class="update-card">
-       
-       <span class="update-date">7/5/2026</span>
-        <p class="update-text">As I get done with my Sanrio vhs collection (English) I have updated the missing physical media section once again, I added more vhs tape titles for the franchises in there, only 2-3 franchises have them so far, but Sanrio is almost ready to be removed from the missing physical media section, its complete already and I’m proud of it, I know animation theater has 4 tapes, i WILL try finding those but can’t promise anything as those are hard to find, but go check the missing media section, way more will be added in the future</p>
-   
-     </div>
-
-    <div class="update-card">
-        <span class="update-date">7/3/2026</span>
-        <p class="update-text">yeah I heard about the whole physical media stuff going on right now, so basically game companies and etc are taking away physical media, which isn’t surprising but kinda sucks, but it’s so nice knowing that people are keeping physical media alive, that’s what my website is, to show my passion for physical media and music production, while I may not have ALL of the physical media in the world (I wish XD) the most I can do is prove that rare vhs tapes CDs and cassettes that “don’t exist” to people really do exist, physical media will live on forever.</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">7/2/2026</span>
-        <p class="update-text">here to announce that I am done with my Sanrio collection at this point, I only need the two CDS I listed and that’s about it, I’m going to work on the other franchises too and get more stuff, insanely proud of how the Sanrio collection turned out, but now it’s time to focus on other collections such as TMNT, And Magic School Bus and SpongeBob, whenever the remaining Sanrio tapes come check my physical media section</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">6/26/2026</span>
-        <p class="update-text">I may be updating this website soon, just the layout, I have a cool little thing planned with the background, may have music player too, also I made the decision to switch here since social media is becoming too exhausting in 2026 and everyone’s getting their accounts deleted by AI, which unfortunately seems to be the new thing nowadays :/, oh well, but expect way more things with this website soon, more cool tabs, new layout, it’s gonna be sick, may make a website for my music too, but yeah expect more from this website, it’s gonna be great</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">6/20/2026</span>
-        <p class="update-text">hey all I’m still alive don’t worry, I’m proud to announce my album dreamland essentials is now FULLY in production thankfully, also, I FINALLY got Pochaccos Exciting Birthday, I wish I got the Alice in wonderland Sanrio vhs, my English sanrio vhs collection  is almost done, that’s IF I’m not missing anymore, Sanrio is the first franchise in my collection I have ever completed, next franchise I’m going to continue working on afterwards, is TMNT, I been wanting to get more TMNT VHS  for too long, so I will work on that, but yeah I’m glad. Got Pochaccos Exciting Birthday, I can officially add it on my vhs updates list</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">5/18/2026</span>
-        <p class="update-text">I actually didn’t know this but a new kuromi album was releasing in June 2026, I guess I need to put it on the missing physical media section, it’s kinda funny that I was never made aware of it, I am now though</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">5/3/2026</span>
-        <p class="update-text">Heyo everyone I’m back and I’m going to be updating the physical media section here soon, got some new goodies for the collection, dreamland album production is going alright, I got a couple new photos too for the cool photos section as well I’m updating that tomorrow though, I love how this website is coming along, I just don’t update it everyday cause to me it’s better to wait two weeks or so, but I am still alive XD</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">4/26/2026</span>
-        <p class="update-text">my first custom vhs tape will be made here soon, also i decided to start a vhs division in 2026 just for fun, i honestly love vhs divisions like family home entertainment and etc, so why not make my own right?, i am not giving out the name yet, i wanna make a couple of custom vhs tapes here first before i give any details out, this will be really fun for me, also im learning how to pan and scan using my video editor app i have on here) : )</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">4/24/2026</span>
-        <p class="update-text">i am in the process of working on my first album dreamland essentials, also im finally making my own custom vhs tapes of shows and stuff i love the most as well, im learning how too, i may make a custom vhs tape section, i have charmyyy kitty planned first, if you do not know what that is, charmyyy kitty had a cartoon released back then so i would love to make a vhs of that, she is hello kittys cat too, i still find that funny, though she is one of my favorite sanrio characters as well</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">4/11/2026</span>
-        <p class="update-text">Well guys I’m back, sorry for the wait, I had a good birthday yesterday (4/10/2026) and I got a couple more physical media goodies for the collection so definitely keep a look out for the physical media section of the website, also I have updated my email so there’s that as well, also I decided to contact Sanrio about the whole club Sanrio dream thing, they say they barely have any information but like what I’m doing physical media wise and they wanna send stickers, so I guess all well that ends well, I should be way more active since I am also getting a laptop soon :), like way more active here, sorry for the long wait I guess, dreamland essentials will officially be in production starting late April!</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">3/26/2026</span>
-        <p class="update-text">So I have a guilty pleasure at the moment, sound effect CDS, I have no idea why but I love these alot, will definitely put that niche on the missing physical media section here in a while, I only started just collecting them right now, no one really grabs these things so why not grab them, I love these a lot for some reason, cannot really pinpoint why though</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">3/17/2026</span>
-        <p class="update-text">So I recently got the vhs tapes, funny thing about the featurette one, there’s an anti piracy warning that scrolls, also I need to get back into updating this website, stay tuned</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">3/11/2026</span>
-        <p class="update-text">I have recently added new franchises to both the missing physical media corner and vhs updates tabs, and I plan on making a CD AND CASSETTE corner on here too and also making a missing cd and cassette corner as well, please keep a lookout for the websites next updates, it’s gonna be sick</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">3/9/2026</span>
-        <p class="update-text">i have recently ordered new vhs tapes and a couple of MSDOS MAGAZINES, i cant wait for them to arrive, that will go in the retro technology tab, time to get some of these tabs started. also for missing physical media when certain stuff comes to me, some of the names on the franchises like say the hello kittys paradise vhs tapes will be removed off them if i have it whats the point of keeping it on missing physical media right?, just an update : D</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">3/6/2026</span>
-        <p class="update-text">good news, i have added a VHS UPDATES section, that way you can see whenever i get a new vhs tape and etc, physical media page will be updated very frequently and yes, i thought about it, i may get some of the sanrio dvds as well, but later down the line, still getting more stuff, new franchise unlocked though the wacky adventures of ronald mcdonald, yep i am getting those vhs tapes :)</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">3/5/2026</span>
-        <p class="update-text">Thinking of getting Sanrio DVDs too. Next up: TMNT VHS and Pound Puppies (VHS and 2012 DVDs)</p>
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">3/4/2026</span>
-        <p class="update-text">Sanrio collection nearly done! (See Physical Media page). Missing Pochacco's Exciting Birthday, 2 Hello Kitty Paradise tapes, and Kuromi In My Head CD.</p>
-    </div>
-</section>
-
-<div class="bandcamp-box">
-    <h3>Check Out My Music</h3>
-    <p>My Bandcamp: <a href="https://blueskycatmusic.bandcamp.com" target="_blank">blueskycatmusic.bandcamp.com</a></p>
-    <p>New Song: <a href="https://blueskycatmusic.bandcamp.com/track/red-log" target="_blank">"Red Log"</a></p>
-    <ul>
-        <li><a href="https://blueskycatmusic.bandcamp.com/album/next-life-chapter" target="_blank">Next Life Chapter (EP)</a></li>
-        <li><a href="https://blueskycatmusic.bandcamp.com/track/star-sparkle" target="_blank">Star Sparkle (Track)</a></li>
-    </ul>
-</div>
-
-<footer>
-    <p>&copy; 2026 Joseph Shipley. All rights reserved.</p>
-</footer>
-
-<script>
-    function showPage(pageId) {
-        const pages = document.querySelectorAll('.page');
-        pages.forEach(page => {
-            page.classList.remove('active');
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                showPage(hash);
+            }
         });
-        const activePage = document.getElementById(pageId);
-        if (activePage) {
-            activePage.classList.add('active');
-        }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-        const hash = window.location.hash.replace('#', '');
-        if (hash) {
-            showPage(hash);
-        }
-    });
-</script>
+    </script>
 </body>
 </html>
