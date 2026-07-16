@@ -13,6 +13,12 @@
             /* Red Background */
             color: white;
             line-height: 1.6;
+            transition: background 0.3s ease; /* Smooth color transition */
+        }
+
+        /* --- ADMIN NIGHT MODE STYLE --- */
+        body.night-active {
+            background-color: black !important;
         }
 
         /* Navigation Bar */
@@ -592,11 +598,6 @@
         <p>Updates go here. I update here sometimes ;/</p>
 
         <div class="update-card">
-            <span class="update-date">7/15/2026</span>
-            <p class="update-text">So while looking at stuff for my Cartoon Network vhs tape collection there's one vhs tape I truly want and a couple more I truly want, but the one I truly want is PowerPuff Girls: Twas The Fight Before Christmas VHS, however due to its rarity it's sadly expensive, I need to put it on hold and pray to the universe above I get that one, someway somehow, but since my Sanrio collection is done, I'm probably going to update the missing physical media section and add more titles, already did for the magic school bus and Arthur, gonna do it for the land of time and redo pound puppies missing media section as well, honestly hoping I get that PPG VHS by the end of the year though, that's today's update</p>
-        </div>
-
-        <div class="update-card">
             <span class="update-date">7/9/2026</span>
             <p class="update-text">So I should be able to complete my Sanrio vhs collection in full soon, it's complete as is but I'm missing a couple more and that's it, also I'm going to be working on my tmnt vhs tape collection now, I'll be able to get out of this world soon, also a music player is going to be added to this website in the coming months so keep a look out for it, it's gonna build up over time with songs I like and other obscure songs, all I got for this update just me building this website the way I want it to be, also take a look out for version 1.2 of this website, it's in the process of being coded</p>
         </div>
@@ -714,6 +715,35 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
+            // 1. Check for Emergency Shutdown
+            if (localStorage.getItem('emergency') === 'true') {
+                document.body.style.backgroundColor = "black";
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding-top: 15vh; font-family: 'Segoe UI', sans-serif; color: red;">
+                        <h1>SYSTEM OFFLINE</h1>
+                        <p style="font-size: 1.2rem;">The website is down due to maintenance or connection issues.</p>
+                    </div>`;
+                return; // Stop loading everything else
+            }
+
+            // 2. Check for Standard Shutdown (Days remaining)
+            const daysLeft = localStorage.getItem('days');
+            if (daysLeft) {
+                document.body.style.backgroundColor = "black";
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding-top: 15vh; font-family: 'Segoe UI', sans-serif; color: white;">
+                        <h1>Down for ${daysLeft} days</h1>
+                        <p style="font-size: 1.2rem; color: #00ff00;">Scheduled breaks. Be back soon!</p>
+                    </div>`;
+                return; // Stop loading everything else
+            }
+
+            // 3. Check for Night Mode (Turns red background black)
+            if (localStorage.getItem('night') === 'true') {
+                document.body.classList.add('night-active');
+            }
+
+            // Original hash loading logic
             const hash = window.location.hash.replace('#', '');
             if (hash) {
                 showPage(hash);
