@@ -214,9 +214,7 @@
         <img src="https://i.ibb.co/rGzvDnwb/Joseph.png" alt="Joseph" class="small-img">
         <h1>Welcome to Joseph Shipley's Website</h1>
 
-        <p>Hello, My Names Joseph, I Was Born On April 10th 2004. I Am a Music Producer, Aspiring Cartoonist, Aspiring Screenwriter, Aspiring Software Developer, and Technology Enthusiast.
-        I Have Always Loved Retro Technology; Always Been A Passion Of Mine.
-        I Hope To Grow And Be The Person I Wanna Be In The Future.</p>
+        <p>Hello, My Names Joseph, I Was Born On April 10th 2004. I Am a Music Producer, Aspiring Cartoonist, Aspiring Screenwriter, Aspiring Software Developer, and Technology Enthusiast. I Have Always Loved Retro Technology; Always Been A Passion Of Mine. I Hope To Grow And Be The Person I Wanna Be In The Future.</p>
         For Contact: VhsNerd2004@Gmail.Com
         <h3>Selected Work</h3>
         <p>I Make Music Sometimes So I Wanna Showcase It Here, I Am Working On My First Album: Dreamland Essentials (Volume 1)</p>
@@ -392,7 +390,7 @@
 
         <div class="vhs-list">
             <h2>Clifford / Max and Ruby / The Backyardigans</h2>
-            <p>Maxs & Rubys Christmas, SpringTime For Max And Ruby Max & Rubys Halloween, (will add more soon if i find more these releases are the only ones i know so far).</p>
+            <p>Maxs & Rubys Christmas, SpringTime For Max And Ruby, Max & Rubys Halloween, (will add more soon if i find more these releases are the only ones i know so far).</p>
         </div>
 
         <div class="vhs-list">
@@ -402,7 +400,7 @@
 
         <div class="vhs-list">
             <h2>Magic School Bus / Arthur</h2>
-            <p>Arthur Cracks The Case, Arthur Gets Along Arthur Gets Lost, Arthhr Gets Spooked Arthur Goes To Hollywood, Arthur Goes To The Doctors Magic School Bus: Gets Lost In Space Magic School Bus: For Lunch Magic School Bus: Hops Home Magic School Bus: Gets Eaten</p>
+            <p>Arthur Cracks The Case, Arthur Gets Along, Arthur Gets Lost, Arthhr Gets Spooked, Arthur Goes To Hollywood, Arthur Goes To The Doctors, Magic School Bus: Gets Lost In Space, Magic School Bus: For Lunch, Magic School Bus: Hops Home, Magic School Bus: Gets Eaten</p>
         </div>
 
         <div class="vhs-list">
@@ -707,33 +705,20 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            // 1. Check for Emergency Shutdown
-            if (localStorage.getItem('emergencyShutdown') === 'true') {
-                document.body.innerHTML = `
-                    <div style="font-family: monospace; background: black; color: red; text-align: center; height: 100vh; width: 100vw; position: fixed; top: 0; left: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0; box-sizing: border-box; padding: 20px;">
-                        <h1 style="font-size: 2.5rem; border: 4px solid red; padding: 15px; margin-bottom: 20px;">EMERGENCY SHUTDOWN</h1>
-                        <p style="font-size: 1.2rem; letter-spacing: 2px;">ALL SYSTEMS SYSTEM OFFLINE</p>
-                    </div>
-                `;
+            // 1. Check for Standard Shutdown (Days remaining)
+            const daysLeft = localStorage.getItem('days');
+            if (daysLeft) {
                 document.body.style.backgroundColor = "black";
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding-top: 15vh; font-family: 'Segoe UI', sans-serif; color: white;">
+                        <h1>Down for ${daysLeft} days</h1>
+                        <p style="font-size: 1.2rem; color: #00ff00;">Scheduled breaks. Be back soon!</p>
+                    </div>`;
                 return; // Stop loading everything else
             }
 
-            // 2. Check for Standard Shutdown (Days remaining)
-            if (localStorage.getItem('shutdownActive') === 'true') {
-                const days = localStorage.getItem('shutdownDays') || '3';
-                document.body.innerHTML = `
-                    <div style="text-align: center; padding: 50px; font-family: sans-serif; color: white;">
-                        <h1 style="color: #ffcc00; font-size: 3rem;">⚠️ Maintenance Mode</h1>
-                        <p style="font-size: 1.2rem;">The website is currently offline. We will return in ${days} days.</p>
-                    </div>
-                `;
-                document.body.style.backgroundColor = "black";
-                return; // Stop loading everything else
-            }
-
-            // 3. Check for Night Mode (Turns red background black)
-            if (localStorage.getItem('nightMode') === 'true') {
+            // 2. Check for Night Mode (Turns red background black)
+            if (localStorage.getItem('night') === 'true') {
                 document.body.classList.add('night-active');
             }
 
