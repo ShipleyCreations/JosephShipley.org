@@ -189,6 +189,35 @@
     </style>
 </head>
 <body>
+    <script>
+        (function() {
+            // 1. Check for Emergency Shutdown
+            if (localStorage.getItem('emergency') === 'true') {
+                document.body.style.backgroundColor = "black";
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding-top: 15vh; font-family: 'Segoe UI', sans-serif; color: red;">
+                        <h1>SYSTEM OFFLINE</h1>
+                        <p style="font-size: 1.2rem;">The website is down due to maintenance or connection issues.</p>
+                    </div>`;
+                window.stop(); // Stop loading the rest of the page
+            }
+            // 2. Check for Standard Shutdown (Days remaining)
+            else if (localStorage.getItem('days')) {
+                const daysLeft = localStorage.getItem('days');
+                document.body.style.backgroundColor = "black";
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding-top: 15vh; font-family: 'Segoe UI', sans-serif; color: white;">
+                        <h1>Down for ${daysLeft} days</h1>
+                        <p style="font-size: 1.2rem; color: #00ff00;">Scheduled breaks. Be back soon!</p>
+                    </div>`;
+                window.stop(); // Stop loading the rest of the page
+            }
+            // 3. Check for Night Mode (Turns red background black)
+            else if (localStorage.getItem('night') === 'true') {
+                document.body.classList.add('night-active');
+            }
+        })();
+    </script>
 
     <nav>
         <ul>
@@ -197,13 +226,15 @@
             <li><a href="#projects" onclick="showPage('projects')">Projects</a></li>
             <li><a href="#music" onclick="showPage('music')">Music Portfolio</a></li>
             <li><a href="#vision" onclick="showPage('vision')">Joseph's Vision</a></li>
-            <li><a href="#photoblog" onclick="showPage('photoblog')">Photo Blog</a></li>
+       
+             <li><a href="#photoblog" onclick="showPage('photoblog')">Photo Blog</a></li>
             <li><a href="#physical" onclick="showPage('physical')">Physical Media</a></li>
             <li><a href="#missing-media" onclick="showPage('missing-media')">Missing Media</a></li>
             <li><a href="#vhs-updates" onclick="showPage('vhs-updates')">VHS Updates</a></li>
             <li><a href="#custom-vhs" onclick="showPage('custom-vhs')">Custom VHS</a></li>
             <li><a href="#retro" onclick="showPage('retro')">Retro Tech</a></li>
             <li><a href="#travel" onclick="showPage('travel')">Travel Photos</a></li>
+  
             <li><a href="#screenshots" onclick="showPage('screenshots')">Game Screenshots</a></li>
             <li><a href="#why" onclick="showPage('why')">Why This Site</a></li>
             <li><a href="#updates" onclick="showPage('updates')">Updates</a></li>
@@ -214,9 +245,7 @@
         <img src="https://i.ibb.co/rGzvDnwb/Joseph.png" alt="Joseph" class="small-img">
         <h1>Welcome to Joseph Shipley's Website</h1>
 
-        <p>Hello, My Names Joseph, I Was Born On April 10th 2004. I Am a Music Producer, Aspiring Cartoonist, Aspiring Screenwriter, Aspiring Software Developer, and Technology Enthusiast.
-            I Have Always Loved Retro Technology; Always Been A Passion Of Mine.
-            I Hope To Grow And Be The Person I Wanna Be In The Future.</p>
+        <p>Hello, My Names Joseph, I Was Born On April 10th 2004. I Am a Music Producer, Aspiring Cartoonist, Aspiring Screenwriter, Aspiring Software Developer, and Technology Enthusiast. I Have Always Loved Retro Technology; Always Been A Passion Of Mine. I Hope To Grow And Be The Person I Wanna Be In The Future.</p>
         For Contact: VhsNerd2004@Gmail.Com
         <h3>Selected Work</h3>
         <p>I Make Music Sometimes So I Wanna Showcase It Here, I Am Working On My First Album: Dreamland Essentials (Volume 1)</p>
@@ -392,9 +421,7 @@
 
         <div class="vhs-list">
             <h2>Clifford / Max and Ruby / The Backyardigans</h2>
-            <p>Maxs & Rubys Christmas, SpringTime For Max And Ruby
-                Max & Rubys Halloween, (will add more soon if i find more
-                these releases are the only ones i know so far).</p>
+            <p>Maxs & Rubys Christmas, SpringTime For Max And Ruby Max & Rubys Halloween, (will add more soon if i find more these releases are the only ones i know so far).</p>
         </div>
 
         <div class="vhs-list">
@@ -404,14 +431,7 @@
 
         <div class="vhs-list">
             <h2>Magic School Bus / Arthur</h2>
-            <p>Arthur Cracks The Case, Arthur Gets Along
-                Arthur Gets Lost, Arthhr Gets Spooked
-                Arthur Goes To Hollywood, Arthur Goes To The
-                Doctors
-                Magic School Bus: Gets Lost In Space
-                Magic School Bus: For Lunch
-                Magic School Bus: Hops Home
-                Magic School Bus: Gets Eaten</p>
+            <p>Arthur Cracks The Case, Arthur Gets Along Arthur Gets Lost, Arthhr Gets Spooked Arthur Goes To Hollywood, Arthur Goes To The Doctors Magic School Bus: Gets Lost In Space Magic School Bus: For Lunch Magic School Bus: Hops Home Magic School Bus: Gets Eaten</p>
         </div>
 
         <div class="vhs-list">
@@ -716,34 +736,6 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            // 1. Check for Emergency Shutdown
-            if (localStorage.getItem('emergency') === 'true') {
-                document.body.style.backgroundColor = "black";
-                document.body.innerHTML = `
-                    <div style="text-align: center; padding-top: 15vh; font-family: 'Segoe UI', sans-serif; color: red;">
-                        <h1>SYSTEM OFFLINE</h1>
-                        <p style="font-size: 1.2rem;">The website is down due to maintenance or connection issues.</p>
-                    </div>`;
-                return; // Stop loading everything else
-            }
-
-            // 2. Check for Standard Shutdown (Days remaining)
-            const daysLeft = localStorage.getItem('days');
-            if (daysLeft) {
-                document.body.style.backgroundColor = "black";
-                document.body.innerHTML = `
-                    <div style="text-align: center; padding-top: 15vh; font-family: 'Segoe UI', sans-serif; color: white;">
-                        <h1>Down for ${daysLeft} days</h1>
-                        <p style="font-size: 1.2rem; color: #00ff00;">Scheduled breaks. Be back soon!</p>
-                    </div>`;
-                return; // Stop loading everything else
-            }
-
-            // 3. Check for Night Mode (Turns red background black)
-            if (localStorage.getItem('night') === 'true') {
-                document.body.classList.add('night-active');
-            }
-
             // Original hash loading logic
             const hash = window.location.hash.replace('#', '');
             if (hash) {
