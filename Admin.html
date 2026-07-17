@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Control Panel</title>
+    <style>
+        /* Basic styling for your admin panel */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #121212;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .admin-box {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+            width: 400px;
+            text-align: center;
+            display: none; /* Hidden by default until password is correct */
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .btn {
+            background-color: #00ff00;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+        .btn:hover {
+            background-color: #121212;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+        .btn-danger {
+            background-color: #ff0000;
+            color: white;
+        }
+        .btn-danger:hover {
+            background-color: #121212;
+            color: #ff0000;
+            border: 1px solid #ff0000;
+        }
+        .status-panel {
+            background: #2a2a2a;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-box" id="adminPanel">
+        <h1>System Control</h1>
+        <p>Welcome, Admin.</p>
+        
+        <div class="status-panel">
+            <strong>System Status:</strong> <span id="sysStatus">ONLINE</span>
+        </div>
+
+        <button class="btn" onclick="toggleNightMode()">Toggle Night Mode (Global)</button>
+
+        <button class="btn" onclick="triggerShutdown()">Trigger Standard Shutdown</button>
+
+        <button class="btn btn-danger" onclick="triggerEmergencyShutdown()">EMERGENCY SHUTDOWN</button>
+    </div>
+
+    <script>
+        // 1. Password Protection (Gatekeeper)
+        // Note: Anyone looking at this file's code can see this password. 
+        // To make it secure, you'd need a backend!
+        const correctPassword = "WizardCats101";
+        const userInput = prompt("Enter Admin Password:");
+
+        if (userInput === correctPassword) {
+            document.getElementById('adminPanel').style.display = 'block';
+        } else {
+            alert("Access Denied.");
+            window.location.href = "/"; // Redirect back to home page
+        }
+
+        // 2. Night Mode Logic
+        function toggleNightMode() {
+            // In a real app, you would send a "true" or "false" command to your database here.
+            // For now, we will simulate it by saving it to local storage.
+            let nightMode = localStorage.getItem('nightMode') === 'true';
+            localStorage.setItem('nightMode', !nightMode);
+            alert("Night mode state updated! (Will require database to affect other users)");
+        }
+
+        // 3. Standard Shutdown (with user-defined days)
+        function triggerShutdown() {
+            const days = prompt("How many days of shutdown/time off?", "3");
+            if (days) {
+                localStorage.setItem('shutdownActive', 'true');
+                localStorage.setItem('shutdownDays', days);
+                document.getElementById('sysStatus').innerText = `SHUTTING DOWN (${days} Days)`;
+                alert(`Standard shutdown set for ${days} days.`);
+            }
+        }
+
+        // 4. Emergency Shutdown
+        function triggerEmergencyShutdown() {
+            const confirmAction = confirm("Are you sure you want to initiate emergency protocols?");
+            if (confirmAction) {
+                localStorage.setItem('emergencyShutdown', 'true');
+                document.getElementById('sysStatus').innerText = "EMERGENCY SHUTDOWN ACTIVE";
+                alert("Emergency shutdown initiated.");
+            }
+        }
+    </script>
+</body>
+</html>
