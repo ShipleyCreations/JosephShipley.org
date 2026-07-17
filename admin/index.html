@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Control Panel</title>
     <style>
-        /* Basic styling for your admin panel */
         body {
             font-family: 'Courier New', Courier, monospace;
             background-color: #121212;
@@ -77,36 +76,32 @@
         </div>
 
         <button class="btn" onclick="toggleNightMode()">Toggle Night Mode (Global)</button>
-
         <button class="btn" onclick="triggerShutdown()">Trigger Standard Shutdown</button>
-
         <button class="btn btn-danger" onclick="triggerEmergencyShutdown()">EMERGENCY SHUTDOWN</button>
     </div>
 
     <script>
-        // 1. Password Protection (Gatekeeper)
-        // Note: Anyone looking at this file's code can see this password. 
-        // To make it secure, you'd need a backend!
-        const correctPassword = "WizardCats101";
-        const userInput = prompt("Enter Admin Password:");
+        // Run after the page fully loads so iOS doesn't glitch on the prompt
+        window.onload = function() {
+            const correctPassword = "WizardCats101";
+            const userInput = prompt("Enter Admin Password:");
 
-        if (userInput === correctPassword) {
-            document.getElementById('adminPanel').style.display = 'block';
-        } else {
-            alert("Access Denied.");
-            window.location.href = "/"; // Redirect back to home page
-        }
+            if (userInput === correctPassword) {
+                document.getElementById('adminPanel').style.display = 'block';
+            } else {
+                alert("Access Denied.");
+                window.location.href = "/"; // Redirects back to your main site
+            }
+        };
 
-        // 2. Night Mode Logic
+        // Night Mode Logic
         function toggleNightMode() {
-            // In a real app, you would send a "true" or "false" command to your database here.
-            // For now, we will simulate it by saving it to local storage.
             let nightMode = localStorage.getItem('nightMode') === 'true';
             localStorage.setItem('nightMode', !nightMode);
-            alert("Night mode state updated! (Will require database to affect other users)");
+            alert("Night mode state updated!");
         }
 
-        // 3. Standard Shutdown (with user-defined days)
+        // Standard Shutdown
         function triggerShutdown() {
             const days = prompt("How many days of shutdown/time off?", "3");
             if (days) {
@@ -117,7 +112,7 @@
             }
         }
 
-        // 4. Emergency Shutdown
+        // Emergency Shutdown
         function triggerEmergencyShutdown() {
             const confirmAction = confirm("Are you sure you want to initiate emergency protocols?");
             if (confirmAction) {
