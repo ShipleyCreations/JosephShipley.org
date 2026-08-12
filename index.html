@@ -133,9 +133,84 @@
             margin-bottom: 20px;
         }
 
+        /* Contact Form Styles */
+        .contact-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 2px solid #00ff00;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-img-container {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .contact-img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid white;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            color: #00ff00;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .contact-form button {
+            background-color: #008000;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+
+        .audio-player-container {
+            margin-top: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            border-radius: 6px;
+        }
+
         @media (max-width: 600px) {
             .media-grid {
                 grid-template-columns: repeat(3, 1fr);
+            }
+            .contact-container {
+                padding: 15px;
             }
         }
 
@@ -207,6 +282,7 @@
             <li><a href="#screenshots" onclick="showPage('screenshots')">Game Screenshots</a></li>
             <li><a href="#why" onclick="showPage('why')">Why This Site</a></li>
             <li><a href="#updates" onclick="showPage('updates')">Updates</a></li>
+            <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
         </ul>
     </nav>
 
@@ -218,6 +294,39 @@
         For Contact: VhsNerd2004@Gmail.Com
         <h3>Selected Work</h3>
         <p>I Make Music Sometimes So I Wanna Showcase It Here, I Am Working On My First Album: Dreamland Essentials (Volume 1)</p>
+    </section>
+
+    <section id="contact" class="page">
+        <h1>Contact Me</h1>
+        <div class="contact-container">
+            <form action="https://formspree.io/f/xjybrrgd" method="POST" class="contact-form">
+                <label>
+                    Your Name:
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>
+                    Your Email:
+                    <input type="email" name="_replyto" required>
+                </label>
+
+                <div class="contact-img-container">
+                    <img src="https://i.ibb.co/d0B3y2BK/7-B4-E5-EAE-CE1-D-4280-8-D7-A-CF748-EB31359.jpg" alt="7B4E5EAE CE1D 4280 8D7A CF748EB31359" border="0" class="contact-img">
+                </div>
+
+                <label>
+                    Your Message:
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="audio-player-container">
+                <p>🌿 <strong>Nature Ambience (Loop)</strong> 🌿</p>
+                <iframe width="100%" height="80" src="https://www.youtube.com/embed/4CmzL-cv-MI?autoplay=1&loop=1&playlist=4CmzL-cv-MI" title="Nature Sound Loop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </section>
 
     <section id="vhs-updates" class="page">
@@ -245,8 +354,7 @@
                 <li>Wizard of Paws</li>
                 <li>Sanrio Animation Theater Volume 1, 2-4 Missing</li>
                 <li>Kiki and Lala's Blue Bird</li>
-                <li>Kiki & Lalaâs Hansel and Gretel</li>
-
+                <li>Kiki & Lala’s Hansel and Gretel</li>
             </ul>
         </div>
 
@@ -603,16 +711,16 @@
 
         <div class="update-card">
         <span class="update-date">7/23/26</span>
-        <p class="update-text">As we enter a new month this website will be one year old soon, making it was the best decision I made, the fact we are so close to 2027 is insane, my goals for next year is to get a couple Sanrio vhs tapes, more GoldenBook Video tapes for my goldenbook video vhs collection and boost my CD Collection section a bit, cassette collection corner deserves more stuff into it as well, and a lot more goals, I wanna update this website a lotâ¦ maybe march 2027? No idea, but be on lookout for any new updates, Iâm happy about how this website turned out, and I plan on getting more Sanrio tapes, another Kiki and Lala one is coming in soon, just exciting stuff for 2027 on the way :)
+        <p class="update-text">As we enter a new month this website will be one year old soon, making it was the best decision I made, the fact we are so close to 2027 is insane, my goals for next year is to get a couple Sanrio vhs tapes, more GoldenBook Video tapes for my goldenbook video vhs collection and boost my CD Collection section a bit, cassette collection corner deserves more stuff into it as well, and a lot more goals, I wanna update this website a lot… maybe march 2027? No idea, but be on lookout for any new updates, I’m happy about how this website turned out, and I plan on getting more Sanrio tapes, another Kiki and Lala one is coming in soon, just exciting stuff for 2027 on the way :)</p>
         </div>
         <div class="update-card">
             <span class="update-date">7/17/2026</span>
-            <p class="update-text">So funny enough I had a idea, since Iâm learning Italian soon I wanna get a couple Italian vhs tapes, one Sanrio, one Garfield, whenever Iâm one month in Iâm gonna watch them to see if I somewhat understand (without subtitles) thisâll be.. surprisingly beneficial for me, I never even knew Sanrio had Italian vhs tapes until very recently, it should be somewhat more fun to learn Italian this way, due to fees the Sanrio Italian vhs tapes are expensive (lowkey expected though), all I have for todayâs update.</p>
+            <p class="update-text">So funny enough I had a idea, since I’m learning Italian soon I wanna get a couple Italian vhs tapes, one Sanrio, one Garfield, whenever I’m one month in I’m gonna watch them to see if I somewhat understand (without subtitles) this’ll be.. surprisingly beneficial for me, I never even knew Sanrio had Italian vhs tapes until very recently, it should be somewhat more fun to learn Italian this way, due to fees the Sanrio Italian vhs tapes are expensive (lowkey expected though), all I have for today’s update.</p>
         </div>
 
         <div class="update-card">
             <span class="update-date">7/15/2026</span>
-            <p class="update-text">So while looking at stuff for my Cartoon Network vhs tape collection thereâs one vhs tape I truly want and a couple more I truly want, but the one I truly want is PowerPuff Girls: Twas The Fight Before Christmas VHS, however due to its rarity itâs sadly expensive, I need to put it on hold and pray to the universe above I get that one, someway somehow, but since my Sanrio collection is done, Iâm probably going to update the missing physical media section and add more titles, already did for the magic school bus and Arthur, gonna do it for the land of time and redo pound puppies missing media section as well, honestly hoping I get that PPG VHS by the end of the year though, thatâs todayâs update</p>
+            <p class="update-text">So while looking at stuff for my Cartoon Network vhs tape collection there’s one vhs tape I truly want and a couple more I truly want, but the one I truly want is PowerPuff Girls: Twas The Fight Before Christmas VHS, however due to its rarity it’s sadly expensive, I need to put it on hold and pray to the universe above I get that one, someway somehow, but since my Sanrio collection is done, I’m probably going to update the missing physical media section and add more titles, already did for the magic school bus and Arthur, gonna do it for the land of time and redo pound puppies missing media section as well, honestly hoping I get that PPG VHS by the end of the year though, that’s today’s update</p>
         </div>
 
         <div class="update-card">
