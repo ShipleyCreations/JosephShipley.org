@@ -208,6 +208,33 @@
             border-radius: 6px;
         }
 
+        /* Countdown Widget Styles */
+        .countdown-widget {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00ff00;
+            border-radius: 6px;
+            padding: 10px 15px;
+            margin: 20px 0;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .countdown-title {
+            font-size: 0.85rem;
+            color: #00ff00;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .countdown-timer {
+            font-family: monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
         @media (max-width: 600px) {
             .media-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -294,6 +321,13 @@
         <h1>Welcome to Joseph Shipley's Website</h1>
 
         <p>Hello, My Names Joseph, I Was Born On April 10th 2004. I Am a Music Producer, Aspiring Cartoonist, Aspiring Screenwriter, Aspiring Software Developer, and Technology Enthusiast. I Have Always Loved Retro Technology; Always Been A Passion Of Mine. I Hope To Grow And Be The Person I Wanna Be In The Future.</p>
+
+        <!-- Countdown Widget -->
+        <div class="countdown-widget">
+            <div class="countdown-title">My website turns 1 year old in:</div>
+            <div id="anniversary-timer" class="countdown-timer">Calculating...</div>
+        </div>
+
         <h3>Selected Work</h3>
         <p>I Make Music Sometimes So I Wanna Showcase It Here, I Am Working On My First Album: Dreamland Essentials (Volume 1)</p>
     </section>
@@ -349,7 +383,6 @@
                 <li>Kiki and Lala's Blue Bird</li>
                 <li>Kiki & Lala’s Hansel and Gretel</li>
                 <li>Kiki and Lala's Princess of the Swan Constellation</li>
-
             </ul>
         </div>
 
@@ -561,7 +594,7 @@
             <img src="https://i.ibb.co/3yY0mw6r/C-JOSEPH-SHIPLEY.jpg">
             <img src="https://i.ibb.co/hnB4Cz9/C-JOSEPH-SHIPLEY-1.jpg">
             <img src="https://i.ibb.co/x8FvKKjr/C-JOSEPH-SHIPLEY-2.jpg">
-            <img src="https://i.ibb.co/ds4xmPP4/C-JOSEPH-SHIPLEY-3.jpg">
+            <img src="https://i.ibb.co/dsxmpp4/C-JOSEPH-SHIPLEY-3.jpg">
             <img src="https://i.ibb.co/Kjf0pWm3/C-JOSEPH-SHIPLEY-4.jpg">
             <img src="https://i.ibb.co/pvn74vcM/C-JOSEPH-SHIPLEY-5.jpg">
             <img src="https://i.ibb.co/bYcDpbF/33-D5-A3-FC-C0-D2-4-D32-B120-6-E65-CC0-F9707.jpg" alt="33D5A3FC C0D2 4D32 B120 6E65CC0F9707">
@@ -853,7 +886,33 @@
             }
         }
 
+        // --- Countdown Timer Logic ---
+        function updateCountdown() {
+            const targetDate = new Date("February 27, 2027 00:00:00").getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            const timerElement = document.getElementById("anniversary-timer");
+            if (!timerElement) return;
+
+            if (difference < 0) {
+                timerElement.innerHTML = "🎉 The website is officially 1 year old!";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
+            // Start countdown timer
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
             // 1. Check for Standard Shutdown (Days remaining)
             const daysLeft = localStorage.getItem('days');
             if (daysLeft) {
