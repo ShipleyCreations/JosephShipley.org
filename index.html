@@ -109,21 +109,35 @@
             max-width: 150px;
         }
 
-        /* Media Grid - For CD, VHS, and Cassettes */
+        /* --- MUSEUM STYLE MEDIA GRID (VHS, CD, CASSETTES) --- */
         .media-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 8px;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
             margin-top: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .media-grid img {
             width: 100%;
-            max-width: 120px;
-            height: auto;
-            border: 1px solid white;
+            height: clamp(120px, 18vw, 180px);
             object-fit: cover;
+            border: 2px solid white;
+            border-radius: 4px;
+            background: #000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .media-grid img:hover {
+            transform: scale(1.05);
+            border-color: #00ff00;
+            box-shadow: 0 6px 15px rgba(0, 255, 0, 0.4);
+            z-index: 2;
         }
 
         .vhs-list {
@@ -237,7 +251,9 @@
 
         @media (max-width: 600px) {
             .media-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+                gap: 8px;
+                padding: 10px;
             }
             .contact-container {
                 padding: 15px;
@@ -735,10 +751,16 @@
     <section id="updates" class="page">
         <h1>Update Corner</h1>
         <p>Updates go here. I update here sometimes ;/</p>
+
+        <div class="update-card">
+            <span class="update-date">10/27/2026</span>
+            <p class="update-text">Well after my last update I actually got a second cassette case, I am hyped as hell to update the cassette section for this website here soon, it’s gonna take awhile but it’ll be so worth it, I have to catch up on certain stuff on here like the retro tech corner and music portfolio stuff, just know I’m still updating, more goodies for the website though for sure <3, also my bigger css grid is done, do you like it? I feel like it needs a bit improvement, but V1.2 Of This Website is all coming together</p>
+        </div>
+
         <div class="update-card">
             <span class="update-date">10/24/2026</span>
             <p class="update-text">While I’m still updating this website a lot, I just wanna say leaving social media was probably the best decision, my focus goes to this project more, also since I’m pretty much almost done with the Sanrio vhs stuff I do plan on getting some nature themed vhs tapes here soon, and I’m finally starting on my Christmas animation vhs collection as well, I’m actually excited to see what the future holds for once, let’s see where this website brings me</p>
-            </div>
+        </div>
 
         <div class="update-card">
             <span class="update-date">9/8/2026</span>
@@ -767,7 +789,7 @@
 
         <div class="update-card">
             <span class="update-date">7/15/2026</span>
-            <p class="update-text">So while looking at stuff for my Cartoon Network vhs tape collection there’s one vhs tape I truly want and a couple more I truly want, but the one I truly want is PowerPuff Girls: Twas The Fight Before Christmas VHS, however due to its rarity it’s sadly expensive, I need to put it on hold and pray to the universe above I get that one, someway somehow, but since my Sanrio collection is done, I’m probably going to update the missing physical media section and add more titles, already did for the magic school bus and Arthur, gonna do it for the land of time and redo pound puppies missing media section as well, honestly hoping I get that PPG VHS by the end of the year though, that’s today’s update</p>
+            <p class="update-text">So while looking at stuff for my Cartoon Network vhs tape collection there’s one vhs tape I truly want and a couple more I truly want, but the one I truly want is PowerPuff Girls: Twas The Fight Before Christmas VHS, however due to its rarity it’s sadly expensive, I need to put it on hold and pray to the universe above I get that one, someway somehow, but since my Sanrio collection is done, I’m probably going to update the missing physical media section and add more titles, already did for the magic school bus and Arthur, gonna do it for the land of time and redo pound puppies missing media section as well, honestly hoping I get that PPG VHS by the end of the year though, that’s today’update</p>
         </div>
 
         <div class="update-card">
