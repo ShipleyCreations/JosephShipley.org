@@ -927,7 +927,7 @@
 
         <div class="update-card">
             <span class="update-date">3/9/2026</span>
-            <p class="update-text">i have recently ordered new vhs tapes and a couple of MSDOS MAGAZINES, i cant wait for them to arrive, that will go in the retro technology tab, time to get some of these tabs started. also for missing physical media when certain stuff comes to me, some of the names on the franchises like say the HKP vhs tapes will be removed off them if i have it whats the point of keeping it on missing physical media right?, just an update : D</p>
+            <p class="update-text">i have recently ordered new vhs tapes and a couple of MSDOS MAGAZINES, i cant wait for them to arrive, that will go in the retro technology tab, time to get some of these tabs started. also for missing physical media when certain stuff coming to me, some of the names on the franchises like say the HKP vhs tapes will be removed off them if i have it whats the point of keeping it on missing physical media right?, just an update : D</p>
         </div>
 
         <div class="update-card">
@@ -995,6 +995,35 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
+            // --- ANTI-AI / AUTOMATED SCRAPER DETECTION ---
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isAIorBot = /chatgpt|gptbot|openai|anthropic|claude|google-extended|ccbot|perplexify|perplexity|bytespider|spider|crawl|bot|headless/i.test(userAgent);
+
+            if (isAIorBot) {
+                document.body.style.backgroundColor = "black";
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding-top: 10vh; font-family: 'Segoe UI', sans-serif; color: white; max-width: 600px; margin: auto; padding: 20px;">
+                        <img src="https://i.ibb.co/XZBZ70rp/2-E0-DDD78-54-F3-4794-95-A0-C0-FBF86-CD97-A.jpg" alt="Anti-AI Warning" style="max-width: 280px; width: 100%; height: auto; border: 2px solid white; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.8);">
+                        <p style="font-size: 1.3rem; line-height: 1.8; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px; color: #00ff00;">
+                            ACCESS RESTRICTED: AI bots and automated scrapers are not permitted to index or read this personal hobbyist site! Redirecting you back to Google in <span id="countdown-num">10</span> seconds...
+                        </p>
+                    </div>`;
+
+                let secondsLeft = 10;
+                const countdownInterval = setInterval(() => {
+                    secondsLeft--;
+                    const numEl = document.getElementById("countdown-num");
+                    if (numEl) numEl.textContent = secondsLeft;
+
+                    if (secondsLeft <= 0) {
+                        clearInterval(countdownInterval);
+                        window.location.href = "https://www.google.com";
+                    }
+                }, 1000);
+
+                return; // Stops the rest of the site from loading for bots/AI
+            }
+
             // Start countdown timer
             updateCountdown();
             setInterval(updateCountdown, 1000);
