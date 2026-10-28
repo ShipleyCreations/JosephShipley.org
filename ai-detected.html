@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Restricted | Joseph Shipley</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+        img {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            border: 2px solid white;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+        p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://i.ibb.co/XZBZ70rp/2-E0-DDD78-54-F3-4794-95-A0-C0-FBF86-CD97-A.jpg" alt="Anti-AI Warning">
+        <p>
+            Access Restricted: AI bots and automated scrapers are not permitted to index or read this personal hobbyist site! Redirecting you back to Google in <span id="countdown-num">10</span> seconds...
+        </p>
+    </div>
+
+    <script>
+        let secondsLeft = 10;
+        const countdownInterval = setInterval(() => {
+            secondsLeft--;
+            const numEl = document.getElementById("countdown-num");
+            if (numEl) numEl.textContent = secondsLeft;
+
+            if (secondsLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = "https://www.google.com";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
