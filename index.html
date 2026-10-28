@@ -847,7 +847,7 @@
 
         <div class="update-card">
             <span class="update-date">7/17/2026</span>
-            <p class="update-text">So funny enough I had a idea, since I’m learning Italian soon I wanna get a couple Italian vhs tapes, one Sanrio, one Garfield, whenever I’m one month in I’m gonna watch them to see if I somewhat understand (without subtitles) this’ll be.. surprisingly beneficial for me, I never even knew Sanrio had Italian vhs tapes until very recently, it should be somewhat more fun to learn Italian this way, due to fees the Sanrio Italian vhs tapes are expensive (lowkey expected though), all I have for today’s update.</p>
+            <p class="update-text">So funny enough I had a idea, since I’m learning Italian soon I wanna get a couple Italian vhs tapes, one Sanrio, one Garfield, whenever I’m one month in I’m gonna watch them to see if I somewhat understand (without subtitles) this’ll be.. surprisingly beneficial for me, I never even knew Sanrio had Italian vhs tapes until very recently, it should be somewhat more fun to learn Italian this way, due to fees the Sanrio Italian vhs tapes are expensive (lowkey expected though), all I have for today’update.</p>
         </div>
 
         <div class="update-card">
@@ -995,52 +995,53 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            // --- CATCH-ALL AI & AUTOMATED SCRAPER DETECTION ---
+            // --- CATCH-ALL AI DETECTION (WAYBACK MACHINE EXCLUDED) ---
             const userAgent = navigator.userAgent.toLowerCase();
             
-            // Comprehensive keyword check for all major LLMs, crawlers, and headless tools
-            const aiKeywords = [
-                'chatgpt', 'gptbot', 'openai', 'anthropic', 'claude', 'google-extended', 
-                'ccbot', 'perplexify', 'perplexity', 'bytespider', 'spider', 'crawl', 
-                'bot', 'headless', 'python-requests', 'axios', 'curl', 'wget', 
-                'gemini', 'copilot', 'deepseek', 'meta-externalagent', 'applebot-extended',
-                'cohere-ai', 'diffbot', 'omgili', 'img2dataset', 'perplexica'
-            ];
-            
-            const matchesAIKeyword = aiKeywords.some(keyword => userAgent.includes(keyword));
-            
-            // Check for headless/automated browser environment signatures
-            const isHeadless = navigator.webdriver || 
-                               !window.chrome && window.navigator.vendor === "" || 
-                               window.outerWidth === 0 || 
-                               window.outerHeight === 0;
+            // Allow Wayback Machine / Internet Archive through explicitly
+            const isWaybackMachine = /ia_archiver|archive\.org|wayback/i.test(userAgent);
 
-            if (matchesAIKeyword || isHeadless) {
-                // Update URL hash to /ai-detected
-                window.location.hash = "ai-detected";
+            if (!isWaybackMachine) {
+                const aiKeywords = [
+                    'chatgpt', 'gptbot', 'openai', 'anthropic', 'claude', 'google-extended', 
+                    'ccbot', 'perplexify', 'perplexity', 'bytespider', 'spider', 'crawl', 
+                    'bot', 'headless', 'python-requests', 'axios', 'curl', 'wget', 
+                    'gemini', 'copilot', 'deepseek', 'meta-externalagent', 'applebot-extended',
+                    'cohere-ai', 'diffbot', 'omgili', 'img2dataset', 'perplexica'
+                ];
+                
+                const matchesAIKeyword = aiKeywords.some(keyword => userAgent.includes(keyword));
+                
+                const isHeadless = navigator.webdriver || 
+                                   (!window.chrome && window.navigator.vendor === "") || 
+                                   window.outerWidth === 0 || 
+                                   window.outerHeight === 0;
 
-                document.body.style.backgroundColor = "black";
-                document.body.innerHTML = `
-                    <div style="text-align: center; padding-top: 10vh; font-family: 'Segoe UI', sans-serif; color: white; max-width: 600px; margin: auto; padding: 20px;">
-                        <img src="https://i.ibb.co/XZBZ70rp/2-E0-DDD78-54-F3-4794-95-A0-C0-FBF86-CD97-A.jpg" alt="Anti-AI Warning" style="max-width: 280px; width: 100%; height: auto; border: 2px solid white; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.8);">
-                        <p style="font-size: 1.3rem; line-height: 1.8; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px; color: #00ff00;">
-                            ACCESS RESTRICTED: AI bots and automated scrapers are not permitted to index or read this personal hobbyist site! Redirecting you back to Google in <span id="countdown-num">10</span> seconds...
-                        </p>
-                    </div>`;
+                if (matchesAIKeyword || isHeadless) {
+                    window.location.hash = "ai-detected";
 
-                let secondsLeft = 10;
-                const countdownInterval = setInterval(() => {
-                    secondsLeft--;
-                    const numEl = document.getElementById("countdown-num");
-                    if (numEl) numEl.textContent = secondsLeft;
+                    document.body.innerHTML = `
+                        <div style="text-align: center; padding-top: 5vh; font-family: 'Segoe UI', sans-serif; color: white; max-width: 800px; margin: auto; padding: 20px;">
+                            <img src="https://i.ibb.co/XZBZ70rp/2-E0-DDD78-54-F3-4794-95-A0-C0-FBF86-CD97-A.jpg" alt="Anti-AI Warning" style="max-width: 520px; width: 100%; height: auto; display: block; margin: 0 auto 30px auto;">
+                            <p style="font-size: 1.4rem; line-height: 1.8; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">
+                                Access Restricted: AI bots and automated scrapers are not permitted to index or read this personal hobbyist site! Redirecting you back to Google in <span id="countdown-num">10</span> seconds...
+                            </p>
+                        </div>`;
 
-                    if (secondsLeft <= 0) {
-                        clearInterval(countdownInterval);
-                        window.location.href = "https://www.google.com";
-                    }
-                }, 1000);
+                    let secondsLeft = 10;
+                    const countdownInterval = setInterval(() => {
+                        secondsLeft--;
+                        const numEl = document.getElementById("countdown-num");
+                        if (numEl) numEl.textContent = secondsLeft;
 
-                return; // Blocks the rest of the site from loading
+                        if (secondsLeft <= 0) {
+                            clearInterval(countdownInterval);
+                            window.location.href = "https://www.google.com";
+                        }
+                    }, 1000);
+
+                    return; // Blocks AI bots while leaving Wayback Machine free to archive
+                }
             }
 
             // Start countdown timer
